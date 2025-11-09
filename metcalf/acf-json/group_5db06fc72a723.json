@@ -1,0 +1,67 @@
+{
+    "key": "group_5db06fc72a723",
+    "title": "Global Elements",
+    "fields": [
+        {
+            "key": "field_5db06fed7917f",
+            "label": "H1",
+            "name": "h1",
+            "type": "textarea",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": 3,
+            "new_lines": ""
+        },
+        {
+            "key": "field_5db0b261568f9",
+            "label": "Law Practice Category",
+            "name": "law_practice_category",
+            "type": "radio",
+            "instructions": "Select the category of law this page falls under. This is typically featured as black text with a yellow background near to top of the page",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "criminal defense": "Criminal Defense",
+                "personal injury": "Personal Injury"
+            },
+            "allow_null": 0,
+            "other_choice": 0,
+            "default_value": "",
+            "layout": "vertical",
+            "return_format": "label",
+            "save_other_choice": 0
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "page"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "side",
+    "style": "seamless",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1571861198
+}

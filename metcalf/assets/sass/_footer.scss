@@ -1,0 +1,286 @@
+/**
+ * Footer Styles
+ *
+ * @package Postali Child
+ * @author Postali LLC
+**/
+
+footer#above-footer {
+	background: $black;
+	color: #fff;
+	h2, h3, p {
+		color: #fff;
+	}
+	h2 {
+		margin-bottom: 20px;
+		margin-top: 0;
+	}
+	span {
+		color: $gold;
+	}
+	p {
+		font-size: 18px;
+		line-height: 1.8em;
+	}
+	.contact-info {
+		span, p {
+			color: #fff;
+		}
+		.contact-phone-email, .address-link {
+			@extend %contact-info-style;
+			font-size: 1.2em;
+			word-break: break-all;
+			a {
+				color: $white;
+				&:hover {
+					color: $gold;	
+					text-decoration: underline;
+				}
+			}
+			.header-email, #header-phone {
+				&:hover {
+					color: $gold;
+					text-decoration: underline;
+				}
+			}
+		}
+	}
+	.above-footer_contact {
+		@extend h2;
+		margin-top: -10px;
+		.gold {
+			color: $gold;
+		}
+	}
+	#above-footer_text p {
+		@media screen and (max-width: $screen-lg) {
+			margin-top: -45px;
+			padding-top: 0;
+		}
+	}
+}
+
+
+
+
+#page-contact {
+	.contact-info {
+		margin-top: 10px;
+		h3 {
+			color: #000;
+			a {
+				color: #000;
+			}
+		}
+	}
+}
+
+footer#site-footer {
+	//font-size: 16px;
+	background: $ltgray;
+
+	header {
+		@media screen and (min-width: $screen-md) {
+		text-align: center;
+		}
+		background: none;
+
+		img {
+			display: inline-block;
+		}
+	}
+
+	.footer-menu-label {
+		display: inline-block;
+		padding-bottom: 10px;
+		margin: 0;
+		font-family: $forma;
+		font-weight: $bold;
+		font-size: 1.4em;
+		line-height: 1.4;
+	}
+	
+	p {
+		margin: 0;
+		padding: 0;
+		#legal-notice {
+			@extend .footer-menu-label;
+		}
+		#legal-notice_text {
+			font-size: 16px;
+		}
+	}
+	
+	#footer-contact-info {
+		display: block;
+		margin-top:10px;
+
+        .address-container {
+            .contact_address {
+                display: flex;
+                justify-content: space-between;
+                align-items: flex-start;
+
+                @media screen and (max-width:$screen-lg) {
+                    flex-wrap: wrap;
+                }
+
+                @media screen and (max-width:$screen-xxs) {
+                    flex-direction: column-reverse;
+                }
+
+                &:first-of-type {
+                    margin-bottom: 10px;
+                }
+
+                .contact-map,
+                .contact-address {
+                    flex: 0 0 48%;
+
+                    @media screen and (max-width:$screen-lg) {
+                        flex:0 0 100%;
+                    }
+                }
+
+                .contact-address {
+                    #office-location {
+                        a {
+                            font-size: 14px !important;
+                        }
+                    }
+
+                    @media screen and (max-width:$screen-lg) {
+                        margin-top: 20px;
+                    }
+                }
+
+                .contact-map {
+                    border:1px solid $black;
+
+                    iframe {
+                        width:100%;
+                        height: 80px;
+                    }
+                }
+            }
+        }
+		span.footer-contact {
+			@extend %contact-info-style;
+			display: block;
+			//margin-top: 20px;
+			font-weight: $bold;
+			line-height: 1.3em;
+			color: $black;
+			margin: 10px 0 20px 0 !important;
+			&.address {
+				//margin: 20px 0;
+				a {
+					text-decoration: none !important;
+                    font-size: 16px;
+                    display: block;
+                    line-height: 140%;
+				}
+			}
+		}
+		.social-links {
+			display: flex;
+			flex-direction: row;
+			justify-content: flex-start;
+			align-items: center;
+			span {
+				font-size: 36px;
+				display: inline-block;
+				padding-right: 10px;
+				&:hover {
+					color: $gold;
+				}
+			}
+		}
+		@media screen and (max-width: $screen-xs) {
+			padding: 15px 30px;
+			margin-top: 10px;
+			span.footer-contact {
+				margin: 20px 0;
+			}
+			.social-links {
+				margin-top: 30px;
+			}
+		}
+	}
+
+	#menu-footer-navigation {
+		li a {
+			font-size: .9em;
+
+		}
+	}
+
+	a:link, a:active, a:visited {
+		font-weight: $bold;
+		line-height: 1.5em;
+		color: $black;
+		text-decoration: underline;
+		&#footer-phone, &.address-link {
+			text-decoration: none;
+		}
+		&#footer-email {
+			word-break: break-all;
+		}
+	}
+	
+	a:hover {
+		color: $gray;
+	}
+
+	ul#menu-footer-navigation {
+		font-family: $forma;
+		list-style: none;
+		padding: 0;
+		margin:0;
+		li {
+			margin: 0;
+		}
+		a {
+			text-decoration: none;
+			display: block;
+			padding: 6px 0;
+		}
+	}
+
+	.triple {
+		@media screen and (max-width: $screen-lg) {
+			.sub-inside {
+				&#footer_nav-menu {
+					padding-top: 0;
+					margin-top: 35px;	
+				}
+			}
+		}
+		@media screen and (min-width: $screen-md) {
+			display: flex;
+			div {
+				
+				
+				box-sizing: border-box;
+			}
+			
+			div:first-child {
+				flex: 0 0 40%;
+			}
+			div:nth-child(2) {
+				flex: 0 0 25%;
+			}
+		} 
+		@media screen and (max-width: $screen-xs) {
+			.sub-inside {
+				&#footer_nav-menu {
+					padding-top: 0;
+					margin-top: 10px;	
+				}
+			}
+		}
+	}
+
+}
+
+

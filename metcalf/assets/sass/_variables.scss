@@ -1,0 +1,60 @@
+/**
+ * Sass variables and functions.
+ *
+ * @package Postali Child
+ * @author Postali LLC
+ */
+
+// Breakpoints
+$screen-xxl: 1660px;
+$screen-xl: 1400px;
+$screen-lg: 1200px;
+$screen-md: 992px;
+$screen-sm: 768px;
+$screen-xs: 667px;
+$screen-xxs: 480px;
+$screen-xxxs: 380px;
+$screen-4xs: 330px;
+
+// Containers
+$container-max-width: $screen-xxl;
+$container-padding:30px;
+
+// Transitions
+$transition-speed:.3s;
+$transition-fast:.3s ease-in-ease-out;
+$transition-slow:.5s ease-in-ease-out;
+
+// Core Colors
+$white: #FFFFFF;
+$gold: #FBCB35;
+$black: #0A090C;
+$ltgray: #F7F7F7;
+$gray: #A2A7A5;
+
+// Link Attributes
+$link-transition-speed: .15s;
+$trans: 0.3s linear;
+
+// Typography
+@import url('https://use.typekit.net/kfa6idv.css');
+$icomoon: 'Icomoon';
+$poynter: 'poynter-oldstyle-display', serif;
+$forma: 'forma-djr-deck', sans-serif;
+
+$body-line-height: 130%;
+
+// Font Weight
+$light: 300;
+$normal: 400;
+$semibold: 600;
+$bold: 700; 
+
+// Nick's Variables
+$height-icon: 21px;
+$width-line: 36px;
+$height-line: 3px;
+$transition-time: 0.4s;
+$rotation: 45deg;
+$translateX: 0;
+

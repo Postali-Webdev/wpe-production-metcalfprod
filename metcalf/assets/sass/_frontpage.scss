@@ -1,0 +1,1366 @@
+/**
+ * Template Front Page Styles
+ *
+ * @package Postali Child
+ * @author Postali LLC
+**/
+
+%fp_interactive-titles {
+	font-family: $forma;
+	font-weight: $light;
+	font-size: 1.2em;
+}
+
+#fp-under-banner,
+#fp-help,
+#fp-why,
+#fp-why~#test-block,
+#fp-practice-areas,
+#fp-defense,
+#fp_results-block,
+#fp-blog,
+#fp-court {
+	//@media screen and (max-width: $screen-lg) {
+	padding-top: 40px;
+	padding-bottom: 30px;
+
+	@media screen and (max-width:$screen-xxs) {
+		padding-top: 0;
+	}
+
+	//}
+}
+
+.home-sm-upper {
+	font-size: 1.1em;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+
+	@media screen and (max-width: $screen-xxs) {
+		font-size: 1em;
+		letter-spacing: 1px;
+	}
+
+	@media screen and (max-width: $screen-xxxs) {
+		font-size: .8em;
+	}
+}
+
+.home-sm {
+	font-size: 1.1em;
+	color: #fff;
+}
+
+.section-title {
+	@media screen and (max-width: $screen-xxxs) {
+		font-size: 1.8em;
+	}
+}
+
+/* PRIMARY BANNER/HERO SECTION */
+#fp-banner {
+	padding: 0;
+
+	#fp_page-thumb {
+		min-height: 900px;
+		background-size: cover;
+		position: relative;
+		background-color: #000;
+		background-repeat: no-repeat;
+		background-position: center 55%;
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		align-items: flex-end;
+		padding-bottom: 60px;
+
+		@media screen and (max-width: $screen-xxl) {
+			background-position: center 80%;
+		}
+
+		@media screen and (max-width: $screen-xl) {
+			min-height: -webkit-fit-content;
+			min-height: -moz-fit-content;
+			min-height: fit-content;
+		}
+
+		@media screen and (max-width: $screen-lg) {
+			//height: 700px;
+			padding-bottom: 30px;
+			background-position: center -80px;
+		}
+
+		@media screen and (max-width: $screen-md) {
+			height: 900px;
+			background-size: 155%;
+		}
+
+		@media screen and (max-width: $screen-sm) {
+			//background-size: cover;
+			overflow: hidden;
+			background-position: center -50px;
+			height: 1000px;
+			padding-bottom: 0;
+		}
+
+		@media screen and (max-width: $screen-xs) {
+			background-size: 200%;
+			background-position: center -80px;
+			height: 1000px;
+		}
+
+		@media screen and (max-width: $screen-xxs) {
+			background-size: 240%;
+			background-position: center -80px;
+			height: 870px;
+		}
+
+		@media screen and (max-width: $screen-xxxs) {
+			background-size: 260%;
+			background-position: center -70px;
+			height: 800px;
+		}
+
+		@media screen and (max-width: $screen-4xs) {
+			height: 730px;
+			min-height: 730px;
+		}
+
+		.inside-xl {
+			position: absolute;
+			bottom: 50px;
+
+			@media screen and (min-width: $screen-xl) {
+				position: relative;
+				top: 30vh;
+			}
+		}
+	}
+
+	&_container {
+		width: 90%;
+		padding-top: 32vh;
+		max-width: $screen-xl;
+		margin: 0 auto;
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
+
+		@media screen and (max-width: $screen-md) {
+			box-sizing: border-box;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			background-color: rgba($black, .3);
+			background-size: cover;
+			height: 900px;
+			width: 100%;
+			padding-top: 26vh;
+			padding-left: 40px;
+		}
+
+		@media screen and (max-width: $screen-sm) {
+			height: 1000px;
+			padding-top: 10vh;
+		}
+
+		@media screen and (max-width: $screen-xxs) {
+			padding: 10vh 10px 0 10px;
+			height: 870px;
+		}
+
+		@media screen and (max-width: $screen-xxxs) {
+			padding: 10vh 10px 0 10px;
+			height: 800px;
+		}
+
+		@media screen and (max-width: $screen-4xs) {
+			height: 730px;
+			padding-top: 20vh;
+		}
+
+		#fp-banner_left {
+			margin-left: 40px;
+
+			.banner-cta {
+				width: 60%;
+			}
+
+			@media screen and (max-width: $screen-md) {
+				padding: 0;
+				width: 90%;
+				margin: 0;
+
+				.banner-cta {
+					width: 90%;
+				}
+			}
+
+			@media screen and (max-width: $screen-sm) {
+				padding: 0;
+			}
+
+			@media screen and (max-width: $screen-xxs) {
+				.banner-cta {
+					font-size: 2.6em;
+				}
+
+				.home-sm {
+					font-size: .9em;
+				}
+
+				.banner-tel {
+					font-size: 2.3em;
+				}
+			}
+		}
+
+		#fp-banner_right {
+			align-self: center;
+			margin-top: -20px;
+			max-width: 450px;
+
+			.global-award_right p {
+				font-weight: $normal;
+			}
+
+			@media screen and (max-width: $screen-md) {
+				width: 90%;
+				max-width: none;
+				padding: 0;
+				margin: 0;
+				align-self: center;
+
+				p {
+					display: block;
+					width: 80%;
+					margin: 10px 0;
+				}
+			}
+
+			@media screen and (max-width: $screen-sm) {
+				padding: 0;
+				margin-top: 20px;
+
+				.banner-right p {
+					display: block;
+					width: 85%;
+					margin-top: -10px;
+					padding-bottom: 10px;
+
+				}
+
+				.global-award_right {
+					p {
+						width: 100%;
+					}
+				}
+			}
+
+			@media screen and (max-width: $screen-xs) {
+				.thirty {
+					display: block;
+					flex: none;
+				}
+
+				.global-award {
+					justify-content: flex-start;
+
+					&_left {
+						max-width: 150px;
+					}
+
+					&_right {
+						display: block;
+
+						p {
+							width: 90%;
+						}
+					}
+				}
+			}
+
+			@media screen and (max-width: $screen-xxs) {
+				margin-top: 0;
+
+				.banner-right p {
+					font-size: 1.2em;
+				}
+
+				.global-award_right.forty-five {
+					display: flex;
+					flex: 0 0 45%;
+
+					p {
+						font-size: .7em;
+					}
+				}
+			}
+
+			@media screen and (max-width: $screen-xxxs) {
+				margin-top: 0;
+
+				.banner-right p {
+					font-size: .9em;
+				}
+
+				.global-award_right.forty-five {
+					display: flex;
+					flex: 0 0 45%;
+
+					p {
+						font-size: .6em;
+					}
+				}
+			}
+		}
+	}
+
+	h1 {
+		margin: 20px 0;
+		color: $gold;
+		font-weight: $normal;
+	}
+
+	p {
+		margin: 10px 0;
+		font-family: $forma;
+		font-weight: $bold;
+
+		&.home-sm {
+			font-size: 1.4em;
+		}
+	}
+
+	a {
+		font-family: $forma;
+		color: $gold;
+		font-weight: bold;
+
+		&.banner-tel {
+			font-size: 3em;
+			line-height: 120%;
+			text-decoration: underline;
+			margin-bottom: 30px;
+			display: block;
+		}
+	}
+
+	.banner-cta {
+		margin: 20px 0;
+		color: $white;
+		font-family: $forma;
+		font-size: 3.5em;
+		line-height: 1.2em;
+		font-weight: 700;
+	}
+
+	.banner-right {
+		p {
+			color: #fff;
+			margin: 30px 0;
+			font-size: 1.5em;
+
+			@media screen and (min-width: $screen-xl) {
+				margin: 70px 0 30px;
+			}
+		}
+	}
+
+	#stars {
+		width: 500px;
+
+		a {
+			color: #fff;
+			text-decoration: underline;
+		}
+
+		@media screen and (max-width: $screen-xl) {
+			display: none;
+		}
+
+		svg {
+			padding: 0 20px 0 0;
+
+			.star-1,
+			.star-2,
+			.star-3,
+			.star-4,
+			.star-5 {
+				fill: $gold;
+			}
+		}
+
+		div {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+		}
+	}
+}
+
+
+
+
+
+/* SECONDARY BANNER SECTION */
+#fp-under-banner {
+	&_left {
+		h2 {
+			margin-top: 0;
+		}
+	}
+
+	&_right {
+		article.main-article {
+			display: block;
+			margin-left: 60px;
+
+			@media screen and (max-width: $screen-md) {
+				margin-left: 0;
+
+				.round-small {
+					margin-top: 40px;
+				}
+			}
+		}
+	}
+}
+
+/* SEEKING HELP SECTION */
+#fp-help {
+	&_left {
+		background: $ltgray;
+
+		ul {
+			list-style: none;
+			margin: 0;
+
+			@media screen and (max-width: $screen-xxxs) {
+				padding: 15px;
+			}
+
+			.fp_tab-li {
+				margin: 0;
+				padding: 4px 0px;
+				border-bottom: 1px solid $black;
+
+				a {
+					text-decoration: none;
+
+					.fp_tab-block {
+						@extend %fp_interactive-titles;
+						display: block;
+						position: relative;
+						width: 100%;
+						margin: 0;
+						padding: 8px 0 8px 8px;
+						line-height: 1.2em;
+						color: $black;
+						transition: $trans;
+
+						span {
+							position: absolute;
+							right: 10px;
+							font-size: .7em;
+							margin-top: 6px;
+						}
+
+						&:hover {
+							background: $gold;
+							font-weight: $bold;
+						}
+					}
+
+				}
+
+				&.active {
+					.fp_tab-block {
+						font-weight: $bold;
+						background: $gold;
+					}
+				}
+
+				@media screen and (max-width: $screen-xxxs) {
+					a .fp_tab-block {
+						font-size: .9em;
+					}
+				}
+
+			}
+		}
+	}
+
+	&_right {
+		background: $black;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+
+		p {
+			color: #fff;
+			font-family: $forma;
+			font-weight: 500;
+			font-size: 1.3em;
+		}
+
+		a {
+			font-family: $forma;
+			color: $gold;
+			text-decoration: underline;
+			padding: 3px 6px;
+
+			&:hover {
+				font-weight: 500 !important;
+				color: black !important;
+				background: $gold !important;
+			}
+		}
+	}
+}
+
+a.btn {
+	background: $gold;
+	color: $black;
+	font-family: $forma;
+
+}
+
+/* WHY HIRE SECTION */
+#fp-why {
+	&_right {
+		position: relative;
+
+		h3 {
+			font-size: 4em;
+		}
+
+		.btn {
+			margin-top: 40px;
+		}
+
+		.accordion-toggle {
+			&:hover {
+				background: $gold;
+
+				h3 {
+					font-weight: 600 !important;
+				}
+			}
+
+			h3 {
+				margin-left: 15px !important;
+			}
+		}
+
+		@media screen and (max-width: $screen-xxs) {
+			.accordion-toggle {
+				h3 {
+					font-size: 20px !important;
+				}
+			}
+		}
+
+		@media screen and (max-width: $screen-xxxs) {
+			.btn {
+				font-size: 16px;
+				margin: 10px 0 0 1vw;
+			}
+
+			.accordion-toggle {
+				font-size: 1.1em;
+			}
+		}
+	}
+}
+
+/* PRACTICE AREAS SECTION */
+//font-stying for practice areas section
+#fp-practice-areas {
+	#fp-practice-header {
+		p {
+			font-weight: $normal;
+		}
+	}
+
+	p {
+		font-weight: $bold;
+		letter-spacing: 1px;
+	}
+
+	#fp-slick {
+		.slick-dots {
+			padding: 100px;
+			margin: -60px 0 0 0;
+
+			@media screen and (max-width: $screen-lg) {
+				padding: 60px 100px;
+			}
+
+			@media screen and (max-width: $screen-xs) {
+				padding: 60px 40px;
+			}
+
+			@media screen and (max-width: $screen-xxxs) {
+				padding: 30px;
+			}
+
+			li {
+				@extend %fp_interactive-titles;
+				line-height: 2.2em;
+				margin: 15px 0;
+                width: 100%;
+                height: auto;
+
+				&.slick-active button {
+					background-color: $gold;
+					font-weight: $bold;
+				}
+
+				margin: 0;
+				list-style: none;
+				border-bottom: 2px solid $black;
+				padding: 5px 0;
+
+				button {
+					background: $ltgray;
+					border: none;
+					display: block;
+					padding: 0;
+					width: 100% !important;
+					font-size: 1.1em;
+					text-align: left;
+					font-family: $forma;
+					padding: 5px 8px 2px;
+					cursor: pointer;
+					position: relative;
+					transition: background .3s ease;
+                    color:$black;
+                    height: 35px;
+
+                    &::before {
+                        display: none !important;
+                    }
+
+					span {
+						position: absolute;
+						right: 10px;
+                        top: 6px;
+					}
+				}
+
+				button:hover {
+					background: $gold;
+				}
+
+				@media screen and (max-width: $screen-xxxs) {
+					font-size: .9em;
+				}
+			}
+		}
+
+        button.slick-next.slick-buttons.icon.icon-arrow-icon.slick-arrow {
+            bottom: 69px !important;
+        }
+	}
+
+	.slick-content-adjust {
+		display: block;
+		position: absolute;
+		bottom: 120px;
+		left: 25%;
+		width: 58%;
+
+		p {
+			margin: 0;
+
+			.block-desc {
+				font-family: $forma;
+				font-size: 1.4em;
+				line-height: 1.2em;
+				font-weight: $bold;
+				color: $white;
+			}
+
+			.desktop_hidden-subtitle {
+				display: block;
+				color: $black;
+				background-color: $gold;
+				width: -webkit-fit-content;
+				width: -moz-fit-content;
+				width: fit-content;
+				font-family: $forma;
+				padding: 2px 5px;
+				font-size: 1em;
+				font-weight: $bold;
+				margin-bottom: 20px;
+				text-transform: uppercase;
+
+				@media screen and (min-width: $screen-md) {
+					display: none;
+				}
+			}
+		}
+
+		a {
+			display: block;
+			margin-top: 32px;
+			margin-bottom: 50px;
+			font-family: $forma;
+			font-weight: $bold;
+			font-size: 1.1em;
+			letter-spacing: .45px;
+			text-decoration: underline;
+			width: -webkit-fit-content;
+			width: -moz-fit-content;
+			width: fit-content;
+			padding: 2px 5px;
+			color: $white;
+
+			&:hover {
+				background-color: $gold;
+				color: $black;
+			}
+		}
+
+		@media screen and (max-width: $screen-md) {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: flex-start;
+			position: relative;
+			width: 70%;
+			left: 15%;
+			right: 15%;
+			//bottom: 80px;
+		}
+
+		@media screen and (max-width: $screen-xs) {
+			.block-desc {
+				font-size: 1.2em;
+				line-height: 1em;
+			}
+		}
+
+		@media screen and (max-width: $screen-xxs) {
+			width: 85%;
+			left: 7.5%;
+			right: 7.5%;
+
+			.block-desc {
+				font-size: 1em;
+				line-height: .9em;
+			}
+
+			a {
+				margin-bottom: 20px;
+			}
+		}
+
+		@media screen and (max-width: $screen-xxxs) {
+			.block-desc {
+				font-size: .9em;
+				line-height: .8em;
+			}
+
+			a {
+				margin-bottom: 10px;
+			}
+		}
+	}
+
+
+
+	.inside-xl {
+		position: relative;
+
+		#fp-practice-header {
+			box-sizing: border-box;
+			background: #fff;
+			z-index: 10;
+
+			h2 {
+				margin-top: 0;
+			}
+
+			p {
+				margin-bottom: 0;
+			}
+
+			@media screen and (min-width: $screen-md) {
+				position: absolute;
+				width: 40%;
+			}
+		}
+	}
+}
+
+//practice areas slick slider styling
+#fp-slick {
+	ul.slick-dots {
+		padding: 60px;
+		background: $ltgray;
+		max-width: 50%;
+		align-self: flex-end;
+
+		@media screen and (min-width: $screen-xl) {
+			padding: 60px 100px;
+		}
+
+		@media screen and (max-width: $screen-md) {
+			max-width: 100%;
+		}
+
+		@media screen and (max-width: $screen-xs) {
+			display: none;
+		}
+	}
+
+	.slick-height {
+		position: relative;
+		max-width: 100%;
+		margin: 0;
+		box-sizing: border-box;
+		height: 900px;
+		background-size: cover;
+
+		@media screen and (max-width: $screen-lg) {
+			height: 800px;
+		}
+
+		@media screen and (max-width: $screen-md) {
+			height: 600px;
+		}
+
+		@media screen and (max-width: $screen-xs) {
+			height: 700px;
+		}
+
+		@media screen and (max-width: $screen-4xs) {
+			height: 800px;
+		}
+
+
+		h3,
+		a {
+			color: #fff;
+		}
+
+		.slick-content-adjust {
+			position: absolute;
+			bottom: 120px;
+			padding-right: 60px;
+
+			@media screen and (min-width: $screen-xl) {
+				padding-right: 100px;
+			}
+		}
+	}
+
+	.slick-prev {
+		position: absolute;
+		z-index: 10;
+		left: auto;
+		right: 455px;
+		bottom: 90px;
+
+		@media screen and (max-width: $screen-xl) {
+			right: 34%;
+		}
+
+		@media screen and (max-width: $screen-md) {
+			position: relative;
+			bottom: auto;
+			top: 543px;
+			left: 110px;
+		}
+
+		@media screen and (max-width: $screen-xs) {
+			top: 653px;
+		}
+
+		@media screen and (max-width: $screen-xxs) {
+			left: 40px;
+		}
+
+		@media screen and (max-width: $screen-4xs) {
+			top: 743px;
+		}
+
+	}
+
+	.slick-next {
+		position: absolute;
+		z-index: 10;
+		left: auto;
+		right: 395px;
+		bottom: 69px !important;
+
+		@media screen and (max-width: $screen-xl) {
+			right: 27%;
+		}
+
+		@media screen and (max-width: $screen-md) {
+			position: relative;
+			bottom: 100px;
+			left: 170px;
+		}
+
+		@media screen and (max-width: $screen-xxs) {
+			left: 110px;
+		}
+	}
+
+	@media screen and (min-width: $screen-md) {
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		align-items: flex-end;
+	}
+}
+
+
+
+#fp-slick .slick-list,
+#fp-slick .slick-dots {
+	box-sizing: border-box;
+	flex: 0 0 50%;
+
+	@media screen and (min-width: $screen-md) {
+		max-width: 50%;
+	}
+}
+
+#fp-slick .slick-dots {
+	position: static !important;
+	order: 1;
+}
+
+#fp-slick .slick-list {
+	order: 2;
+}
+
+/* FELONY/MISDEMEANOR OVERVIEW SECTION */
+#fp-defense,
+#fp-court {
+	.container p {
+		margin-bottom: 80px;
+
+		@media screen and (max-width: $screen-xs) {
+			padding-top: 20px;
+		}
+	}
+
+	.fp-defense-block {
+		margin-bottom: 17px;
+
+		&.section-title {
+			@media screen and (max-width: $screen-xs) {
+				padding-top: 0;
+				margin-top: 20px;
+			}
+
+			&.centered-text {
+				text-align: center;
+				margin-left: auto;
+				margin-right: auto;
+			}
+		}
+
+		&.subtitle {
+			margin: 87px 0 62px 0;
+
+			@media screen and (max-width: $screen-xs) {
+				margin: 60px 0 40px 0;
+			}
+
+			@media screen and (max-width: $screen-xxs) {
+				margin: 40px 0 20px 0;
+			}
+		}
+	}
+
+	ul.tab-selectors-big {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+
+		li {
+			cursor: pointer;
+			margin: 0;
+			background: $ltgray;
+
+			h3 {
+				display: block;
+				margin: 40px 0;
+				font-family: $forma;
+				font-weight: 700;
+				color: $black;
+				position: relative;
+				padding: 0 60px;
+
+				span {
+					transition: transform .3s ease;
+					display: inline-block;
+					position: absolute;
+					right: 30px;
+					margin-top: -5px;
+					width: 30px;
+					height: 30px;
+				}
+			}
+
+			@media screen and (max-width: $screen-xs) {
+				h3 {
+					font-size: 1.6em;
+
+					span {
+						margin-top: 3px;
+					}
+				}
+			}
+
+			@media screen and (max-width: $screen-xxs) {
+				h3 {
+					font-size: 1.2em;
+					margin: 30px 0;
+
+					span {
+						margin-top: 4px;
+					}
+				}
+			}
+
+			@media screen and (max-width: $screen-xxxs) {
+				h3 {
+					font-size: 1em;
+					margin: 20px 0;
+
+					span {
+						margin-top: 2px;
+					}
+				}
+			}
+
+			@media screen and (max-width: $screen-4xs) {
+				h3 {
+					font-size: .8em;
+				}
+			}
+		}
+
+		li.active {
+			background: $black;
+
+			h3 {
+				color: #fff;
+
+				span {
+					transform: rotate(45deg);
+
+					&::before {
+						color: $gold;
+					}
+				}
+			}
+		}
+	}
+}
+
+#fp-justice {
+	overflow-x: hidden;
+
+	.subtitle.em {
+		line-height: 1.4em;
+		margin: -15px 0 -30px;
+		font-size: 28px;
+	}
+
+	.help-boxes {
+		display: flex;
+		justify-content: space-between;
+		align-items: normal;
+		flex-wrap: wrap;
+
+		.help-box {
+			display: block;
+			width: 49%;
+			margin: 1% 0;
+			text-align: left;
+			padding: 30px;
+			box-sizing: border-box;
+			background-color: $ltgray;
+			position: relative;
+
+			@media screen and (max-width:$screen-xs) {
+				width: 100%;
+			}
+
+			@media screen and (max-width:$screen-xxs) {
+				padding: 30px 0;
+
+				&::before {
+					content: "";
+					left: -40px;
+					width: 40px;
+					height: 100%;
+					top: 0;
+					background: $ltgray;
+					position: absolute;
+				}
+
+				&::after {
+					content: "";
+					right: -40px;
+					width: 40px;
+					height: 100%;
+					top: 0;
+					background: $ltgray;
+					position: absolute;
+				}
+			}
+
+			.headline {
+				font-family: $forma;
+				font-size: 22px;
+				font-weight: bold;
+				margin-bottom: 10px;
+				align-items: center;
+				display: flex;
+
+				span {
+					background: $gold;
+					width: 40px;
+					height: 40px;
+					justify-content: center;
+					align-items: center;
+					display: flex;
+					border-radius: 50%;
+					margin-right: 10px;
+				}
+			}
+		}
+	}
+
+	.columns {
+		&.bottom {
+			align-items: normal;
+
+			.courts-box {
+				width: 100%;
+				display: block;
+				background: $ltgray;
+                margin-top: 60px;
+
+                @media screen and (max-width:$screen-lg) {
+                    width:60%;
+                    margin:60px auto 0;
+                }
+
+                @media screen and (max-width:$screen-sm) {
+                    width:100%;
+                    margin:60px 0 0 0;
+                }
+
+
+				.courts-container {
+					display: flex;
+					flex-wrap: wrap;
+					align-items: flex-start;
+
+					p.heading {
+						font-family: $forma;
+						font-weight: 600;
+						font-size: 22px;
+					}
+
+					.courts-bottom {
+						width: 100%;
+						padding: 50px;
+						box-sizing: border-box;
+						display:flex;
+                        justify-content: space-between;
+                        flex-wrap: wrap;
+
+						@media screen and (max-width:$screen-xxs) {
+							padding: 30px 0;
+
+							&::before {
+								content: "";
+								left: -40px;
+								width: 40px;
+								height: 100%;
+								top: 0;
+								background: $ltgray;
+								position: absolute;
+							}
+
+							&::after {
+								content: "";
+								right: -40px;
+								width: 40px;
+								height: 100%;
+								top: 0;
+								background: $ltgray;
+								position: absolute;
+							}
+						}
+
+						.image-block {
+                            width: 35%;
+							display: flex;
+							justify-content: flex-start;
+
+                            @media screen and (max-width:$screen-lg) {
+								width:100%;
+                                margin-bottom: 40px;
+							}
+
+							@media screen and (max-width:$screen-sm) {
+								flex-wrap: wrap;
+							}
+
+							.image-box {
+
+								@media screen and (max-width:$screen-lg) {
+									width: 100%;
+								}
+
+								img {
+									width: 100%;
+                                    height: 100%;
+                                    -o-object-fit: cover;
+                                       object-fit: cover;
+                                    -o-object-position: center;
+                                       object-position: center;
+								}
+
+								@media screen and (max-width:$screen-sm) {
+									margin-right: 0;
+								}
+							}
+						}
+
+                        .details-block {
+                            width: 62%;
+
+                            @media screen and (max-width:$screen-lg) {
+								width:100%;
+							}
+
+                            h3 {
+                                font-size: 30px;
+                                margin-top: 0;
+                            }
+
+                            .subtitle {
+                                display: block;
+                                margin: -20px 0 0;
+                                line-height: 1.9em;
+                                font-style: normal;
+                                font-weight: normal;
+                                font-family: $forma;
+                                display: flex;
+                                line-height: 150%;
+    
+                                @media screen and (max-width:$screen-lg) {
+                                    display: flex;
+                                }
+    
+                                &::before {
+                                    position: relative;
+                                    content: "•";
+                                    font-size: 44px;
+                                    font-weight: normal;
+                                    margin-right: 10px;
+                                    color: $gold;
+                                    font-family: sans-serif;
+                                }
+                            }
+
+                            .courts-cta {
+        
+                                p {
+                                    font-family: $forma;
+                                    font-weight: 600;
+                                }
+                            }
+                        }
+
+						ul {
+							margin-left: 40px;
+							position: relative;
+
+							li {
+								line-height: 140%;
+								margin-bottom: 5px;
+								font-size: 18px;
+
+								&::marker {
+									font-size: 0;
+								}
+
+								&::before {
+									content: "—";
+									color: $gold;
+									position: absolute;
+									left: -35px;
+									font-weight: 900;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+/* ADDITIONAL CONTENT */
+#fp-additional-content {
+	background: $ltgray;
+
+	.container {
+		padding: 0 12%;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+
+		@media screen and (max-width:$screen-sm) {
+			padding: 0 30px;
+		}
+
+		.left,
+		.right {
+			width: 46%;
+
+			@media screen and (max-width:$screen-md) {
+				width: 100%;
+			}
+		}
+
+		.spacer-break {
+			width: 100%;
+			display: block;
+			height: 1px;
+		}
+	}
+}
+
+/* BLOG SECTION */
+#fp-blog {
+	.section-title {
+		margin-top: 0;
+	}
+
+	.centered-text.padd-top {
+		@media screen and (max-width: $screen-sm) {
+			padding: 10px 0 40px 0;
+		}
+	}
+
+	@media screen and (max-width: $screen-lg) {
+		padding-top: 40px;
+	}
+}

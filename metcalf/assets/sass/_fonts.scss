@@ -1,0 +1,91 @@
+/**
+ * Web Font Styles, H Styles, Body Text Styles
+ *
+ * @package Postali Child
+ * @author Postali LLC
+**/
+
+/* Fonts */
+body, h1, h2, h3, h4, h5, h6, p, ul {
+    // color: $body-text-color;
+    color: $black;
+} 
+
+/*p, a, ul, ol {
+
+}*/
+
+ul li, ol li {
+    //margin: 0 0 0 20px;
+    font-size: 19px;
+}
+/*dl, img {
+
+}*/
+
+blockquote {
+    @extend h3;
+    line-height: 2em;
+}
+
+h1, h2, h3 {
+    font-family: $forma;
+    color: $black;
+}
+
+h3 {
+    font-size: 1.8em;
+}
+
+h4 {
+    font-family: $poynter;
+    font-size: 1.2em;
+}
+
+body {
+    font-family: $poynter; 
+}
+
+a {
+    color: $black;
+    //text-decoration: none;
+    -webkit-transition:$trans;
+    transition:$trans;
+    &:hover {
+        // color:$lt-red;
+        text-decoration: underline;
+    }
+}
+
+.forma {
+    font-family: $forma;
+}
+
+.btn {
+    display:inline-block;
+    padding:15px 40px;
+    font-size: 20px;
+    font-weight: $bold;
+    text-decoration:none;
+    transition:$trans;
+    &:hover {
+        color: $white;
+        background-color:$black;
+    }
+}
+
+p {
+    font-size:18px;
+    line-height: 1.5;
+    margin-bottom:30px;
+    font-family: $poynter;
+    font-weight: $normal;
+    a {
+        font-family: $poynter;
+        text-decoration: underline;
+        &:hover {
+            font-weight: $bold;
+            text-decoration: underline;
+        }
+    }
+}

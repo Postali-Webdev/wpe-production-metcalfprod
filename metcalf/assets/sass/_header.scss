@@ -1,0 +1,417 @@
+/**
+ * Header Styles
+ *
+ * @package Postali Child
+ * @author Postali LLC
+**/
+
+$transition-time: 0.4s;
+$rotation: 45deg;
+$translateY: ($height-icon / 2);
+$translateX: 0;
+
+#header-top {
+  position: fixed;
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  height: 80px;
+  z-index: 100;
+  @media screen and (min-width: $screen-lg) {
+    height: 100px;
+  }
+  &_left {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    position: relative;
+    background: #fff;
+
+    @media screen and (min-width: $screen-lg) {
+      flex: 0 0 250px;
+    }
+    @media screen and (min-width: $screen-xl) {
+      flex: 0 0 380px;
+    }
+    a {
+      display: block;
+      //padding: 15px 15px 8px 15px;
+      width: 345px;
+      text-align: center;
+      @media screen and (max-width: $screen-xl) {
+        width: 280px;
+        padding: 12px 20px 15px 20px;
+      }
+      @media screen and (max-width: $screen-sm) {
+        width: 250px;
+      }
+      @media screen and (max-width: $screen-xxs) {
+        width: 200px;
+        padding-top: 18px;
+      }
+    }
+  }
+
+  &_right {
+    background: #000;
+    z-index: 200;
+    max-height: 100px;
+    width: auto;
+    #header-top_menu {
+      height: 100%;
+
+      #header-top_mobile {
+        height: 100%;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        width: 80px;
+      }
+    }
+    @media screen and (min-width: $screen-lg) {
+      flex: 1;
+      #header-top_menu {
+        #global {
+          display: none;
+        }
+        #header-top_mobile {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+#menu-icon {
+  position: relative;
+  width: 44px;
+  height: $height-icon;
+  margin-top: -5px;
+
+  display: block;
+
+  .line {
+    display: block;
+    background: $gold;
+
+    width: $width-line;
+    height: $height-line;
+    position: absolute;
+    left: 4px;
+    //border-radius: ($height-line / 2);
+    transition: all $transition-time;
+    -webkit-transition: all $transition-time;
+    -moz-transition: all $transition-time;
+
+    &.line-1 {
+      top: 0;
+    }
+    &.line-2 {
+      top: 50%;
+    }
+    &.line-3 {
+      top: 100%;
+    }
+  }
+  &:hover,
+  &:focus {
+    .line-1 {
+      transform: translateY($height-line / 2 * -1);
+      -webkit-transform: translateY($height-line / 2 * -1);
+      -moz-transform: translateY($height-line / 2 * -1);
+    }
+    .line-3 {
+      transform: translateY($height-line / 2);
+      -webkit-transform: translateY($height-line / 2);
+      -moz-transform: translateY($height-line / 2);
+    }
+  }
+  &.active {
+    .line-1 {
+      transform: translateY($translateY) translateX($translateX)
+        rotate($rotation);
+      -webkit-transform: translateY($translateY) translateX($translateX)
+        rotate($rotation);
+      -moz-transform: translateY($translateY) translateX($translateX)
+        rotate($rotation);
+    }
+    .line-2 {
+      opacity: 0;
+    }
+    .line-3 {
+      transform: translateY($translateY * -1) translateX($translateX)
+        rotate($rotation * -1);
+      -webkit-transform: translateY($translateY * -1) translateX($translateX)
+        rotate($rotation * -1);
+      -moz-transform: translateY($translateY * -1) translateX($translateX)
+        rotate($rotation * -1);
+    }
+  }
+  /*@media screen and (min-width: $screen-lg) {
+			
+		display: none;
+	}*/
+}
+
+.menu-open {
+  #global {
+    transform: translateX(0);
+  }
+}
+
+#desktop {
+  display: none;
+  @media screen and (min-width: $screen-lg) {
+    display: block;
+    height: 100%;
+  }
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    li {
+      margin: 0;
+      padding: 0;
+    }
+  }
+  #menu-primary-navigation-1,
+  #menu-wesley-chapel-nav {
+    a {
+      text-decoration: none;
+    }
+    li {
+      .sub-menu {
+        transition: all 0.5s ease;
+        visibility: hidden;
+        opacity: 0;
+      }
+    }
+    li:hover {
+      .sub-menu {
+        visibility: visible;
+        opacity: 1;
+      }
+    }
+  }
+  ul#menu-primary-navigation-1,
+  ul#menu-wesley-chapel-nav {
+    padding: 0 20px;
+    box-sizing: border-box;
+    text-align: center;
+    @media screen and (min-width: $screen-lg) {
+      padding: 0;
+    }
+    @media screen and (max-width: $screen-md) {
+      margin-top: 30px;
+      padding-top: 20px;
+    }
+
+    li.menu-item {
+        display: inline-block;
+        text-align: center;
+        position: relative;
+        padding: 24px 0;
+        a {
+            color: $white;
+            font-family: $forma;
+            font-weight: 700;
+            padding: 18px 15px 16px;
+            display: block;
+            font-size: 0.9em;
+            &:hover {
+            color: $gold;
+            }
+
+            &.this-page {
+            color: $black;
+            background-color: $gold;
+            }
+        }
+        
+        ul.sub-menu {
+            position: absolute;
+            width: 300px;
+            background: #fff;
+            padding: 30px 0;
+            margin-top: 25px;
+            left: 50%;
+            margin-left: -150px;
+
+            &.show {
+                opacity:1 !important;
+                visibility: visible !important;
+            }
+
+            li {
+                display: block;
+                padding: 0;
+                text-align: center;
+                a {
+                    font-family: $poynter;
+                    font-weight: 400;
+                    padding: 10px;
+                    transition: background 0.4s ease;
+                }
+                a:link,
+                a:active,
+                a:visited {
+                    color: $black;
+                    background: #fff;
+                }
+                a:hover {
+                    background: $gold;
+                }
+            }
+        }
+    }
+
+    li.menu-item-has-children {
+      a {
+        padding: 18px 25px 16px 15px;
+      }
+    }
+    > li:last-child {
+      a {
+        background: $gold;
+        color: $black;
+        &:hover {
+          color: $white;
+        }
+      }
+      transition: margin-left 0.4s ease;
+      margin-left: 0;
+      @media screen and (min-width: $screen-xl) {
+        margin-left: 30px;
+      }
+    }
+  }
+  .accordion-toggle {
+    top: 27px;
+    right: -10px;
+  }
+}
+
+#global {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 81px 40px 40px;
+  background: #fff;
+  z-index: -1;
+  transform: translateX(100%);
+  transition: transform 0.4s ease;
+  @media screen and (min-width: $screen-lg) {
+    display: none;
+  }
+  ul#menu-primary-navigation {
+    margin: 0;
+    padding: 20px 0 0;
+    list-style: none;
+    a {
+      text-decoration: none;
+    }
+    li {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      text-align: center;
+      margin-bottom: 10px;
+      a {
+        font-family: $forma;
+        font-weight: 700;
+        color: $black;
+        display: inline-block;
+        padding: 16px;
+      }
+    }
+
+    ul.sub-menu {
+      margin: 0;
+
+      > li {
+        margin-bottom: 0;
+        a {
+          font-family: $poynter;
+          font-weight: 400;
+          padding: 10px;
+        }
+      }
+    }
+  }
+
+  @media screen and (min-width: $screen-lg) {
+  }
+}
+
+nav#global,
+nav#desktop {
+  .accordion-toggle {
+    width: 40px;
+    height: 40px;
+    margin-top: 4px;
+
+    display: inline-block;
+    position: absolute;
+    transform: rotate(0deg);
+    transition: transform 0.4s ease;
+    cursor: pointer;
+    .fa {
+      border-top: 10px solid $gold;
+      border-right: 6px solid transparent;
+      border-bottom: 10px solid transparent;
+      border-left: 6px solid transparent;
+      position: relative;
+
+      height: 0;
+      width: 0;
+
+      left: 14px;
+      top: 15px;
+    }
+  }
+
+  .accordion-toggle.toggle-rotate {
+    transform: rotate(180deg);
+  }
+
+  .menu-item-137 a {
+    @media screen and (max-width: $screen-lg) {
+      color: $black;
+      background-color: $gold;
+    }
+  }
+}
+
+#main-buffer {
+  height: 80px;
+  @media screen and (min-width: $screen-lg) {
+    height: 99.1px;
+  }
+}
+
+a.skip-link {
+    background: #fff;
+    color: $black !important;
+    font-weight: 400;
+    left: 60px;
+    padding: 10px 20px;
+    position: absolute;
+    transform: translateY(-100%);
+    z-index: 100000;
+    top: 0;
+    font-size: 15px;
+    opacity:0;
+
+    &:focus {
+        transform: translateY(0%);
+        transition: transform 0.3s;
+        top: 40px;
+        opacity:1;
+    }
+}

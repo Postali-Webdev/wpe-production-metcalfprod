@@ -1,0 +1,160 @@
+/* ACCORDION BLOCK STYLING */
+#faq-accordion {
+  padding: 0;
+  max-width: 1340px;
+
+  @media screen and (max-width: $screen-sm) {
+    padding: 0 30px 80px;
+  }
+
+  h3 {
+    margin: 0 auto;
+    padding: 0;
+    margin: 0 auto 20px;
+  }
+
+  .accordions.inside-lg {
+    max-width: 1340px;
+    padding: 0;
+  }
+
+  li.menu-item-has-children {
+    font-size: 1.3em;
+    border-bottom: 1px solid #000;
+    position: relative;
+    line-height: 1.6em;
+    .sub-menu {
+      border-top: 1px solid #000;
+      padding: 20px 0;
+      box-sizing: border-box;
+      a {
+        font-weight: 700;
+        color: #000;
+        display: block;
+        padding: 8px 0;
+        &.menu-sidebar_internal-link {
+          padding-left: 3px;
+          line-height: 1em;
+        }
+      }
+      &.gold-li {
+        font-size: 18px;
+        font-family: $poynter;
+        @media screen and (max-width: $screen-xxs) {
+          font-size: 16px;
+        }
+      }
+    }
+    a.accordion-toggle {
+      font-family: $forma;
+      color: $black;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      text-decoration: none;
+      cursor: pointer;
+      padding: 8px 20px 8px 0;
+      &#about_accordion {
+        @extend %fp_interactive-titles;
+        text-decoration: none;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px 0 10px 0ç;
+        color: $black;
+        &:hover,
+        &:focus {
+          color: $black;
+        }
+        span#expand-plus {
+          display: inline;
+          font-size: 0.7em;
+          transition: $trans;
+        }
+        .sub-menu {
+          .menu-item-object-page a {
+            &:after {
+              content: none;
+            }
+            @extend .read-post;
+          }
+        }
+      }
+      h3 {
+        @extend %fp_interactive-titles;
+        display: inline;
+        padding: 15px 0 10px 0;
+        margin: 10px 0;
+        color: $black;
+      }
+      span#expand-plus {
+        display: inline;
+        font-size: 0.9em;
+        transition: $trans;
+      }
+      .sub-menu {
+        .menu-item-object-page a {
+          &:after {
+            content: none;
+          }
+          @extend .read-post;
+        }
+      }
+    }
+
+    &_content {
+      display: none;
+      padding: 40px 80px;
+    }
+
+    &.highlight {
+      a.accordion-toggle {
+        &#about_accordion {
+          border-bottom: none;
+          font-weight: $bold;
+          span#expand-plus {
+            -webkit-transform: rotate(135deg);
+            transform: rotate(135deg);
+          }
+        }
+        h3 {
+          font-weight: $bold;
+          border-bottom: none;
+        }
+        span#expand-plus {
+          -webkit-transform: rotate(135deg);
+          transform: rotate(135deg);
+        }
+      }
+    }
+    @media screen and (max-width: $screen-xs) {
+      display: block;
+      word-break: break-all;
+      font-size: 1em;
+    }
+    @media screen and (max-width: $screen-xxs) {
+      font-size: 18px;
+    }
+    // @media screen and (max-width: 320px) {
+    //   font-size: 0.7em;
+    // }
+  }
+}
+
+ul.menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  li {
+    margin: 0;
+    list-style: none;
+  }
+}
+
+.menu-item-has-children.highlight {
+  > a {
+    font-weight: 700;
+  }
+}

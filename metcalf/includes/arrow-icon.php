@@ -1,0 +1,1 @@
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 125.25 198.33"><title>arrow-icon</title><polygon points="16.46 198.33 0 180.28 88.97 99.17 0 18.06 16.46 0 125.25 99.17 16.46 198.33"/></svg>

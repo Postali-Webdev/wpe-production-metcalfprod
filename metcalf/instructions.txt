@@ -1,0 +1,61 @@
+Theme usage instructions
+
+This child theme has been created with additional features that align with our current website dev demands
+
+If a feature is to be added to the functions.php, check the parent theme to see if it already exists, the parent theme is robust
+
+Compass can be used to compile scss files into css files
+http://compass-style.org/help/
+
+To complie your JS use the commandline
+
+Grunt
+https://gruntjs.com/getting-started
+
+Run these commands in this order
+
+npm install -g grunt-cli
+npm install grunt --save-dev
+npm install grunt-contrib-jshint --save-dev
+npm install grunt-contrib-uglify --save-dev
+npm install grunt-contrib-sass --save-dev
+npm install grunt-contrib-watch --save-dev
+
+Grunt Usage Commands
+grunt - This will run all the commands in the bottom line of the grunt file
+grunt watch - This is a watch command that is used in replacement of compass
+
+Grunt can be used as a CSS and JS watching compiler, more information at the link belowf
+https://github.com/gruntjs/grunt-contrib-watch
+
+Slick
+Slick has been included but commented out in the functions.php, only enqueue this on templates where it is necessary
+http://kenwheeler.github.io/slick/
+
+The link below is our mobile menu snippet, it should be customized and used as needed based on the themes design. The code should be which should be inserted into /js/scr/scripts.js and minimized with Grunt
+https://codepen.io/tylermeansbusiness/pen/KEpooq
+
+Show/Hide Menu jQuery snippet
+https://codepen.io/tylermeansbusiness/pen/axjyzd
+
+Accordions Snippet
+https://codepen.io/tylermeansbusiness/pen/MRBQdQ
+
+
+block-banner.php is a base example of how to use a repeating design element through the website without coding it over and over, to call this block or any other just use the below php command
+<php get_template_part('block', 'banner');?>
+block-banner.php is also a great example of how to set a default image if a featured image is not being used as the background attribute.
+
+block-banner.php also has an example of how to set a default image with ACF Pro to default to if no featured image has been set
+
+Getting Started
+
+1) Replace line 2 in the /wp-content/themes/postali-child/styles.css file with the Clients Name
+2) Add a screenshot.png to the 
+3) Advanced Custom Fields created for this site build should be stored in the /wp-contents/themes/postali-child/acf-json/ field for easy environment moving
+
+Thats all for now, you're ready to start building
+
+Uploading to servers
+1) Do not upload the .sass-cache directory
+2) Only upload touched files if making updates to an existing site

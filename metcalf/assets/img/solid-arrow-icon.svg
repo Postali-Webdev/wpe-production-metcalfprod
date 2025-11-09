@@ -1,0 +1,1 @@
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 199.13 177"><title>solid-arrow-icon</title><path id="Polygon_1" data-name="Polygon 1" d="M99.88,188.5.32,11.5H199.45Z" transform="translate(-0.32 -11.5)"/></svg>
