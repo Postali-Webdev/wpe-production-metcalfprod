@@ -33,17 +33,21 @@ $translateX: 0;
       flex: 0 0 250px;
     }
     @media screen and (min-width: $screen-xl) {
-      flex: 0 0 380px;
+      flex: 0 0 325px;
     }
     a {
       display: block;
       //padding: 15px 15px 8px 15px;
-      width: 345px;
+      width: 295px;
       text-align: center;
-      @media screen and (max-width: $screen-xl) {
-        width: 280px;
+      @media screen and (max-width: 1500px) {
+        width: 225px;
         padding: 12px 20px 15px 20px;
       }
+      // @media screen and (max-width: $screen-xl) {
+      //   width: 280px;
+        
+      // }
       @media screen and (max-width: $screen-sm) {
         width: 250px;
       }
@@ -222,6 +226,9 @@ $translateX: 0;
             padding: 18px 15px 16px;
             display: block;
             font-size: 0.9em;
+            @media screen and (max-width: 1500px) {
+              font-size: 15px;
+            }
             &:hover {
             color: $gold;
             }
@@ -273,6 +280,35 @@ $translateX: 0;
       a {
         padding: 18px 25px 16px 15px;
       }
+      ul.sub-menu {
+        li.menu-item-has-children {
+          position: relative;
+          a {
+            padding-right: 20px;
+          }
+          &:after {
+            content: "\e903";
+            font-family: $icomoon;
+            font-size: 14px;
+            color: $black;
+            position: absolute;
+            top: 14px;
+            right: 10px;
+          }
+          &:hover {
+            ul.sub-menu {
+              display: block;
+              left: unset;
+              right: -100%;
+              top: -25px;
+            }
+          }
+          ul.sub-menu {
+            display: none;
+          }
+        }
+        
+      }
     }
     > li:last-child {
       a {
@@ -306,6 +342,7 @@ $translateX: 0;
   z-index: -1;
   transform: translateX(100%);
   transition: transform 0.4s ease;
+  overflow: scroll;
   @media screen and (min-width: $screen-lg) {
     display: none;
   }
