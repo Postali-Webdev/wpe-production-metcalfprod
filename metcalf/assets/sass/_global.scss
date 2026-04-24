@@ -409,11 +409,20 @@ img {
       text-decoration: underline;
       font-family: inherit;
       cursor: pointer;
+      font-weight: 600 !important;
+      transition: none !important;
+      -webkit-animation: none !important;
+              animation: none !important;
+
       &:hover {
-        font-weight: $bold;
-        text-decoration: underline;
+        font-weight: 600 !important;
+        text-decoration: none !important;
         cursor: pointer;
+        transition: none !important;
+        -webkit-animation: none !important;
+              animation: none !important;
       }
+      
       &.link-style {
         display: block;
         padding: 20px 0 10px 0;

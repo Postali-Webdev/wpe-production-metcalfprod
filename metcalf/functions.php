@@ -50,6 +50,13 @@
 
 	}
 
+    add_action( 'wp_head', function() {
+        if ( is_single() && has_post_thumbnail() ) {
+            $img_url = get_the_post_thumbnail_url( get_the_ID(), 'full' ); // Adjust 'full' to your desired size
+            echo '<link rel="preload" as="image" href="' . esc_url( $img_url ) . '" fetchpriority="high">';
+        }
+    }, 1 );
+
 	// Register Site Navigations
 	function postali_child_register_nav_menus() {
 		register_nav_menus(

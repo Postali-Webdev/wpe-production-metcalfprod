@@ -26,10 +26,15 @@ get_header(); ?>
                     <a class='post-author_single' href="/about/" ><p class="post-author">Author: Brett Metcalf</p></a>
 
                     <?php if ( has_post_thumbnail() ) { ?> <!-- If featured image set, use that, if not use options page default -->
-                    <?php $featImg = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full' );?>
-                        <?php if ( !empty ( $featImg[0] )) { ?>
-                            <img src="<?php echo $featImg[0]; ?>" class="featured-image"  />
-                        <?php } else { ?>
+                    <?php 
+                        $thumb_id = get_post_thumbnail_id( get_the_ID() );
+                        $image_url = get_the_post_thumbnail_url( get_the_ID(), 'full' );
+                        $alt_text = get_post_meta( $thumb_id, '_wp_attachment_image_alt', true );
+                    ?>
+                    
+                        <?php if ( $image_url ) { 
+                                echo '<img src="' . esc_url( $image_url ) . '" alt="' . esc_attr( $alt_text ) . '">';
+                        } else { ?>
                             <img src="/wp-content/uploads/2021/10/pixel.png">
                         <?php } ?>
                     <?php } ?>
