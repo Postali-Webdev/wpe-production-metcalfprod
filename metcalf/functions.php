@@ -54,6 +54,16 @@
         if ( has_post_thumbnail() ) {
             $img_url = get_the_post_thumbnail_url( get_the_ID(), 'full' ); // Adjust 'full' to your desired size
             echo '<link rel="preload" as="image" href="' . esc_url( $img_url ) . '" fetchpriority="high">';
+            
+            // Check if webp version exists and preload it too
+            $webp_url = $img_url . '.webp';
+            $upload_dir = wp_upload_dir();
+            $img_path = str_replace( $upload_dir['baseurl'], $upload_dir['basedir'], $img_url );
+            $webp_path = $img_path . '.webp';
+            
+            if ( file_exists( $webp_path ) ) {
+                echo '<link rel="preload" as="image" href="' . esc_url( $webp_url ) . '" fetchpriority="high" type="image/webp">';
+            }
         }
     }, 1 );
 
