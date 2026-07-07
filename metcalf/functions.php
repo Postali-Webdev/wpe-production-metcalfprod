@@ -25,13 +25,11 @@
 		wp_enqueue_style( 'styles', get_stylesheet_directory_uri() . '/assets/css/styles.css'); // Enqueue child theme styles.css
 		//wp_enqueue_style( 'slick-css', get_stylesheet_directory_uri() . '/assets/css/slick.css'); // Enqueue child theme styles.css
 		
-		wp_enqueue_style('adobe-fonts', 'https://use.typekit.net/kfa6idv.css');
+		wp_enqueue_style('google-font-inter', 'https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+		wp_enqueue_style('google-font-noto-serif', 'https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap');
 		wp_enqueue_style('icon-styles', 'https://d1azc1qln24ryf.cloudfront.net/152819/Metcalf/style-cf.css?hoal9p');
 		
-
 		// home.js only script
-
-
 		if( is_page(1380) || is_page(6) || is_page(1419) ){ // only include pages using front-page.php template
 		    wp_enqueue_script(
 				'homescript', get_stylesheet_directory_uri() . '/assets/js/home.min.js', array( 'jquery' ), 1.0, true
@@ -72,7 +70,9 @@
 		register_nav_menus(
 			array(
 				'header-nav' => __( 'Header Navigation', 'postali' ),
-				'footer-nav' => __( 'Footer Navigation', 'postali' ),
+				'footer-nav' => __( 'Footer Navigation Left', 'postali' ),
+				'footer-nav-center' => __( 'Footer Navigation Center', 'postali' ),
+				'footer-nav-right' => __( 'Footer Navigation Right', 'postali' ),
 				'sidebar-nav' => __( 'Sidebar Navigation', 'postali' ),
 				'wesley-chapel-nav' => __( 'Wesley Chapel Navigation', 'postali' ),
 			)

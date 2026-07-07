@@ -257,7 +257,8 @@ get_header();?>
                 <p>Metcalf Falls, Criminal Defense Attorneys, P.A. know what it takes to defend against:</p>
             </div>
 
-            <div id="fp-slick" class='flex'>
+            <!-- <div id="fp-slick" class='flex'> -->
+            <div class='practice-areas blog-2020'>
 
 
 
@@ -271,17 +272,18 @@ get_header();?>
 
                     ?>
 
-                    <div>
-                        <div class="slick-height mega-padd inside-md" style="background-image: url(<?php echo $image['url']; ?>)">
-                            <div class="fp_slick-content slick-content-adjust">
-                            <?php echo $content; ?>
 
-                            <?php if( $link ): ?>
-                                <a href="<?php echo $link; ?>">Visit <?php echo $practiceArea ?> Page</a>
-                            <?php endif; ?>
-                            </div>
+
+                    <article>
+                        <div class="featured-wrap" style="background: url('<?php echo $image['url']; ?>'); background-size: cover; background-repeat: no-repeat; background-position: center center;"></div>
+                        <div class="article-content">
+                            <span class="blog-title">
+                                <?php echo $practiceArea; ?>
+                            </span>
+                            <?php echo $content; ?>
                         </div>
-                    </div>
+                        <a class="pa-link" title="Visit <?php echo $practiceArea ?> Page" href="<?php echo $link; ?>">About <?php echo $practiceArea; ?> Defense</a>
+                    </article>
 
                 <?php endwhile; ?>
             </div>

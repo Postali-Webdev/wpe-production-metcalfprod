@@ -6,6 +6,7 @@
  */
 $footerPhone = get_field('phone', 'options');
 $footerEmail = get_field('email', 'options');
+$footerContactLink = get_field('contact_page_link', 'options');
 $aboveLeft = get_field('main_left', 'options');
 $aboveRight = get_field('main_right', 'options');
 $featuredImage = get_field('testimonials_featured', 'options');
@@ -38,12 +39,14 @@ get_header(); ?>
                 <h1 class="archive-h1">Reviews</h1>
 
                 <div class="top-contact-info">
-                    <div>
-                        <?php if( !empty( $image ) ): ?>
-                        <div class="round-small"><img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" /></div>
-                        <?php endif; ?>
-                    </div>
-	                <span class='contact-phone-email'><span class='gold'>P</span> <a id='header-phone' href="tel:<?php echo $footerPhone; ?>"><?php echo $footerPhone; ?></a><br><span class='gold'>E</span> <a class='email-underline header-email' href="mailto:<?php echo $footerEmail; ?>"><?php echo $footerEmail; ?></a></span>
+                    <span class='contact-phone-email version2 ondark'>
+						<a class='btn' id='header-phone' href="tel:<?php echo $footerPhone; ?>">
+							Call Us
+						</a>
+						<a class='btn btn-secondary' id='contact-link' href="<?php echo $footerContactLink['url']; ?>">
+							<?php echo $footerContactLink['title']; ?>
+						</a>
+					</span>
                 </div>
 
             </div>

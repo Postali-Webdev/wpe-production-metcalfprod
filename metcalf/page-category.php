@@ -7,6 +7,7 @@
  */
 $footerPhone = get_field('phone', 'options');
 $footerEmail = get_field('email', 'options');
+$footerContactLink = get_field('contact_page_link', 'options');
 $aboveLeft = get_field('main_left', 'options');
 $aboveRight = get_field('main_right', 'options');
 
@@ -37,12 +38,14 @@ get_header(); ?>
 	                <h1 class="archive-h1"><?php the_title(); ?></h1>
 
 	                <div class="top-contact-info">
-	                    <div>
-	                        <?php if( !empty( $image ) ): ?>
-	                            <div class="round-small"><img src="/wp-content/uploads/2020/03/practice-area-header-brett-metcalf-thumbnail-img.jpg" alt="Attorney Brett Metcalf headshot" /></div>
-	                        <?php endif; ?>
-	                    </div>
-                        <span class='contact-phone-email'><span class='gold'>P</span> <a id='header-phone' href="tel:<?php echo $footerPhone; ?>"><?php echo $footerPhone; ?></a><br><span class='gold'>E</span> <a class='email-underline header-email' href="mailto:<?php echo $footerEmail; ?>"><?php echo $footerEmail; ?></a></span>
+                        <span class='contact-phone-email version2 ondark'>
+                            <a class='btn' id='header-phone' href="tel:<?php echo $footerPhone; ?>">
+                                Call Us
+                            </a>
+                            <a class='btn btn-secondary' id='contact-link' href="<?php echo $footerContactLink['url']; ?>">
+                                <?php echo $footerContactLink['title']; ?>
+                            </a>
+					    </span>
 	                </div>
 
             	</div><!-- end of half -->
@@ -59,40 +62,38 @@ get_header(); ?>
 
     <section class="inside-xl blog-posts">
 
-        <article class="emphasis">
-            <div class="em-contain">
+        <?php if( $caseResult ) : ?>
+            <article class="emphasis">
+                <div class="em-contain">
 
-                <?php echo '<div class="gold-block">' . $lc . '</div>'; ?>               
-                <?php echo $caseResult; ?>
+                    <?php echo '<div class="gold-block">' . $lc . '</div>'; ?>               
+                    <?php echo $caseResult; ?>
 
-            </div>
-        </article>
-
-        <?php if($intro): ?>
-        <section class="centered-text">
-            <?php echo $intro; ?>
-            <div class="padd-top">
-                <?php get_template_part('block', 'awards');?>
-            </div>
-        </section>
+                </div>
+            </article>
         <?php endif; ?>
-    
+
 
         <div class="content">
-
             <div class="sub-inside">
-
-            <?php if($topSection): ?>
                 <article class="main-article">
-                    <?php echo $topSection; ?>
-                </article>
-            <?php endif; ?>
+            
+                    <?php if($intro): ?>
+                        <?php echo $intro; ?>
+                    <?php endif; ?>
 
+                    <?php if($topSection): ?>
+                            <?php echo $topSection; ?>
+                    <?php endif; ?>
+                </article>
             </div>
 
-            
             <div class="sidebar thirty" id='category_sidebar'>
                 <?php dynamic_sidebar('main-sidebar'); ?>
+
+                <?php get_template_part('block', 'sidebar-contact'); ?>
+
+                <?php get_template_part('block', 'sidebar-quote'); ?>
             </div>
         
         </div><!-- end of .content -->
@@ -102,9 +103,9 @@ get_header(); ?>
     </section> 
 </div><!-- end of blog-holder -->
 
-    <?php get_template_part('block', 'testimonials');?>
-
-
+    <div class="awards-wrapper">
+        <?php get_template_part('block', 'awards');?>
+    </div>
 
 <div class="blog-holder">
     <section class="inside-xl blog-posts">

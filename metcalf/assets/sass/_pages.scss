@@ -117,6 +117,12 @@
     }
 }
 
+#testi-block {
+  .slick-slider {
+    padding-bottom: 0 !important;
+  }
+}
+
 /* ACCORDION STYLING - multiple pages & sidebar menu */
 #blog-holder li.menu-item-has-children {
   font-size: 1.3em;
@@ -139,7 +145,7 @@
     }
   }
   a.accordion-toggle {
-    font-family: $forma;
+    font-family: $inter;
     color: $black;
     display: flex;
     flex-direction: row;
@@ -178,7 +184,7 @@
     h3 {
       @extend %fp_interactive-titles;
       display: inline;
-      padding: 15px 0 10px 0;
+      padding: 15px 10px 10px 0;
       margin: 10px 0;
       color: $black;
     }
@@ -222,7 +228,6 @@
   }
   @media screen and (max-width: $screen-xs) {
     display: block;
-    word-break: break-all;
     font-size: 1em;
   }
   @media screen and (max-width: $screen-xxs) {
@@ -260,7 +265,7 @@ ul.menu {
 }
 
 a.google-schema_link {
-  font-family: $forma;
+  font-family: $inter;
   text-decoration: underline;
 }
 
@@ -268,7 +273,7 @@ a.google-schema_link {
   padding: 20px 0;
   p {
     margin: 1px 0 0;
-    font-family: $forma;
+    font-family: $inter;
     text-transform: uppercase;
   }
   @media screen and (max-width: $screen-xxxs) {
@@ -283,14 +288,14 @@ a.google-schema_link {
 .google-schema_average {
   top: 20px;
   position: relative;
-  font-family: $forma;
+  font-family: $inter;
   color: $gray;
   @media screen and (max-width: $screen-sm) {
     top: 0;
   }
 }
 p.google-schema_date {
-  font-family: $forma;
+  font-family: $inter;
   color: $gray;
   margin-top: 30px;
 }
@@ -298,6 +303,118 @@ p.google-schema_date {
 // SINGLE PAGE STYLES
 /* ABOUT PAGE STYLES */
 .page-template-page-about-attorney {
+  #blog-banner {
+    padding: 0;
+    .flex.inside-xl {
+      max-width: 100%;
+      padding: 0;
+      align-items: stretch;
+      position: relative;
+      @media screen and (max-width: $screen-lg) {
+        display: flex;  
+      }
+      @media screen and (max-width: $screen-sm) {
+        flex-direction: column-reverse;
+      }
+      #page-banner-real {
+        flex: 0 0 26%;
+        @media screen and (max-width: $screen-lg) {
+          flex: 0 0 35%;
+        }
+        img {
+          height: 480px;
+          width: 100%;
+          object-fit: cover;
+          object-position: center top;
+          @media screen and (max-width: $screen-lg) {
+            height: 100%;
+          }
+          @media screen and (max-width: $screen-sm) {
+            height: 600px;
+          }
+        }
+      }
+      .padd.fifty {
+        padding: 0;
+        flex: unset;
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+        height: unset;
+        justify-content: space-between;
+        .copy {
+          padding: 40px 60px;
+          @media screen and (max-width: $screen-md) {
+            padding: 30px;
+          }
+        }
+        h1 {
+          margin-top: 0;
+          margin-bottom: 16px;
+        }
+        .employee-position {
+          text-transform: uppercase;
+          font-size: 16px;
+          font-weight: $bold;
+          font-family: $inter;
+          margin: 0;
+        }
+        article {
+          background: $black;
+          padding: 30px 30px 30px 54px;
+          @media screen and (max-width: $screen-sm) {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+          }
+          blockquote, p {
+            margin: 0;
+          }
+          blockquote {
+            &:before {
+              font-size: 3em; 
+              margin-top: -5px;
+              margin-left: -40px;
+            }
+          }
+          .feat_quote {
+            color: $white;
+            font-size: 20px;
+            font-family: $noto-serif;
+            font-style: italic;
+            font-weight: 600;
+          }
+        }
+      }
+    }
+  }
+  #attorney-intro {
+    padding-bottom: 0;
+    .columns {
+      .column-50:first-of-type {
+        h2 {
+          margin: 0 0 40px 0;
+        }
+      }
+      .accordions {
+        padding: 0;
+        @media screen and (max-width: $screen-md) {
+          margin-top: 32px;
+        }
+        .highlight {
+          .accordion-toggle {
+            font-weight: 300 !important;
+          }  
+        }
+        .accordion-toggle {
+          font-size: 24px !important;
+        }
+      }
+    }
+  }
+  #results-block {
+    padding-bottom: 0;
+  }
   #testi-block {
     padding: 0;
   }
@@ -472,7 +589,7 @@ article.emphasis {
   h3 {
     margin: 10px 0;
     display: block;
-    font-family: $forma;
+    font-family: $inter;
     font-size: 1.8em;
     font-weight: $bold;
     line-height: 1.4em;
@@ -481,7 +598,7 @@ article.emphasis {
   a.button {
     display: block;
     margin: 30px 0 10px 0;
-    font-family: $forma;
+    font-family: $inter;
     font-size: 0.9em;
     font-weight: $bold;
     text-decoration: underline;
@@ -537,7 +654,7 @@ article.emphasis {
       flex-direction: column;
     }
     .contact_address {
-      font-family: $forma;
+      font-family: $inter;
       font-weight: $bold;
       #office-location {
         margin-bottom: 20px;
@@ -558,7 +675,7 @@ article.emphasis {
         display: block;
         padding-bottom: 20px;
         margin-top: 30px;
-        font-family: $forma;
+        font-family: $inter;
         font-size: 0.8em;
         font-weight: $bold;
         text-decoration: underline;
@@ -641,7 +758,7 @@ section#contact-bottom {
             border-bottom: 2px solid #000;
             padding: 10px 0;
             font-size: 1.2em;
-            font-family: $forma;
+            font-family: $inter;
             font-weight: 700;
             box-shadow: none;
             border-radius: 0;
@@ -709,7 +826,7 @@ section#contact-bottom {
     background-size: cover;
   }
 
-  min-height: 630px;
+  //min-height: 630px;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   grid-gap: 60px;
@@ -720,13 +837,12 @@ section#contact-bottom {
 
   article {
     padding: 10px;
-    height: 450px;
+    height: auto;
+    box-sizing: border-box;
     @media screen and (max-width: $screen-sm) {
       margin: 30px auto;
-      width: 80%;
-    }
-    @media screen and (max-width: $screen-xxs) {
-      height: 500px;
+      width: 100%;
+      padding: 0;
     }
 
     a {
@@ -737,7 +853,7 @@ section#contact-bottom {
       span.blog-title {
         display: block;
         margin: 10px;
-        font-family: $forma;
+        font-family: $inter;
         font-size: 1.4em;
         font-weight: $bold;
         line-height: 1.45em;
@@ -749,9 +865,9 @@ section#contact-bottom {
         }
       }
       .article-content {
-        padding: 20px 20px 40px;
+        padding: 20px 20px 100px;
         @media screen and (max-width: $screen-xxxs) {
-          padding: 20px 10px 40px;
+          //padding: 20px 10px 40px;
         }
         .blog-title {
           display: block;
@@ -760,7 +876,7 @@ section#contact-bottom {
         }
       }
       .post-author {
-        font-family: $forma;
+        font-family: $inter;
         background: #000;
         margin-bottom: -10px;
         padding: 10px 20px 10px;
@@ -784,7 +900,7 @@ section#contact-bottom {
         bottom: 10px;
         padding-bottom: 20px;
         margin: 10px;
-        font-family: $forma;
+        font-family: $inter;
         font-size: 1em;
         font-weight: $bold;
         text-decoration: underline;
@@ -813,7 +929,7 @@ section#contact-bottom {
     .blog-author-title {
       display:inline;
       font-weight: $bold;
-      font-family: $forma;
+      font-family: $inter;
       margin: 0;
       @media screen and (max-width: $screen-xxxs) {
         width: 73px;
@@ -821,8 +937,117 @@ section#contact-bottom {
     }
   }
 
-
-
+  &.practice-areas {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 36px;
+    align-items: stretch;
+    @media screen and (max-width: $screen-lg) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @media screen and (max-width: $screen-sm) {
+      grid-template-columns: 1fr;
+    }
+    article {
+        position: relative;
+        height: auto;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        @media screen and (max-width: $screen-sm) {
+          margin: 0;
+          width: 100%;
+          margin-bottom: 32px;
+        }
+        span.blog-title {
+          display: block;
+          margin: 10px;
+          font-family: $inter;
+          font-size: 1.4em;
+          font-weight: $bold;
+          line-height: 1.45em;
+          @media screen and (max-width: $screen-xxs) {
+            // font-size: 1.15em;
+          }
+          @media screen and (max-width: $screen-xxxs) {
+            font-size: 1.2em;
+          }
+        }
+        .featured-wrap {
+          height: 277px;
+        }
+        .pa-link {
+          display: flex;
+          align-items: center;
+          height: auto;
+          width: 100%;
+          height: 53px;
+          padding: 16px 32px;
+          box-sizing: border-box;
+          background: $gold;
+          font-family: $inter;
+          font-weight: $bold;
+          position: relative;
+          &:after {
+            content: "\e903";
+            font-family: $icomoon;
+            font-size: 16px;
+            color: $black;
+            position: absolute;
+            right: 32px;
+          }
+        }
+      .article-content {
+        padding: 40px;
+        background: $ltgray;
+        flex-grow: 1;
+        @media screen and (max-width: $screen-xxxs) {
+          padding: 20px 10px 40px;
+        }
+        .blog-title {
+          display: block;
+          max-height: 210px;
+          overflow: hidden;
+          margin: 0;
+        }
+        p {
+          font-family: $noto-serif;
+          font-size: 18px; 
+          font-weight: normal !important;
+          line-height: 180%;
+        }
+      }
+      .post-author {
+        font-family: $inter;
+        background: #000;
+        margin-bottom: -10px;
+        padding: 10px 20px 10px;
+        color: $gold;
+        font-weight: 400;
+        text-align: center;
+        position: absolute;
+        width: 100%;
+        box-sizing: border-box;
+        bottom: 0;
+      }
+      &.post-author_link {
+        height: auto;
+      }
+      .gold-block {
+        background: none;
+      }
+      .read-post {
+        display: block;
+        position: absolute;
+        bottom: 10px;
+        padding-bottom: 20px;
+        margin: 10px;
+        font-family: $inter;
+        font-size: 1em;
+        font-weight: $bold;
+        text-decoration: underline;
+      }
+    }
+  }
 }
 
 .blog-posts {
@@ -838,7 +1063,7 @@ section#contact-bottom {
 }
 
 .post-author {
-  font-family: $forma;
+  font-family: $inter;
   font-weight: bold;
   text-transform: uppercase;
 }
@@ -852,6 +1077,15 @@ a.post-author_single {
 .post-type-archive-results {
   .content {
     padding-top: 80px;
+  }
+}
+
+.post-type-archive-results {
+  .archive_sidebar-menu {
+    padding: 20px;
+    li {
+      font-size: 19px !important;
+    }
   }
 }
 
@@ -906,13 +1140,13 @@ a.post-author_single {
       .testi_list-title {
         display: inline-block;
         padding-left: 20px;
-        font-family: $forma;
+        font-family: $inter;
         font-weight: $bold;
         font-size: 1.8em;
       }
       p {
         padding-left: 18px;
-        font-family: $poynter;
+        font-family: $noto-serif;
         font-size: 1em;
         font-weight: normal;
         line-height: 1.7em;
@@ -978,14 +1212,14 @@ a.post-author_single {
   .results-number {
     display: block;
     margin-bottom: -5px;
-    font-family: $forma;
+    font-family: $inter;
     font-size: 2.2em;
     font-weight: $bold;
     line-height: 2em;
   }
   .results-desc {
     margin-bottom: 15px;
-    font-family: $forma;
+    font-family: $inter;
     font-size: 1.9em;
     font-weight: $bold;
     line-height: 1.6em;
@@ -997,6 +1231,28 @@ a.post-author_single {
 }
 
 #results-block {
+  &_left {
+    .results-number.gold {
+      font-size: 36px !important;
+      line-height: 140% !important;
+      font-weight: 700 !important;
+      margin-bottom: 12px;
+      @media screen and (max-width: $screen-sm) {
+        font-size: 30px;
+        line-height: 120%;
+      }
+    }
+    .results-desc {
+      font-family: $noto-serif;
+      font-weight: 500;
+      font-size: 30px;
+      line-height: 47px;
+      @media screen and (max-width: $screen-sm) {
+        font-size: 24px;
+        line-height: 40px;
+      }
+    } 
+  }
   &_right {
     display: flex;
     flex-direction: column;
@@ -1004,7 +1260,8 @@ a.post-author_single {
 
     article {
       p {
-        font-size: 1.2em;
+        font-size: 20px;
+        line-height: 36px;
       }
     }
   }
@@ -1017,7 +1274,7 @@ a.post-author_single {
   padding: 10px;
   background: $gold;
   color: $black;
-  font-family: $forma;
+  font-family: $inter;
   font-weight: $bold;
   text-align: center;
   text-transform: capitalize;
@@ -1083,6 +1340,148 @@ a.post-author_single {
           }
         }
       }
+    }
+  }
+}
+
+.page-template-page, .page-template-default {
+  #blog-banner {
+    padding: 0;
+    .flex {
+      align-items: stretch;
+      @media screen and (max-width: $screen-xl) {
+        display: flex !important;
+      }
+      @media screen and (max-width: $screen-md) {
+        flex-direction: column;
+      }
+    }
+    #page-banner {
+      height: auto;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: right bottom;
+      width: 100%;
+      @media screen and (max-width: $screen-md) { 
+        min-height: 300px;
+        height: 300px;
+      }
+    }
+    .padd.fifty {
+      padding: 60px;
+      position: relative;
+      @media screen and (max-width: $screen-lg) {
+        padding: 60px 30px;
+      }
+      @media screen and (max-width: $screen-md) {
+        padding: 30px;
+      }
+      .gold-block {
+        margin-bottom: 28px;
+        font-weight: $normal;
+      }
+      h1 {
+        max-width: 800px;
+        margin: 0 0 28px 0;
+      }
+      .round-small {
+        margin-bottom: 28px;
+        @media screen and (max-width: $screen-md) {
+          position: absolute;
+          top: -45px;
+          right: 30px;
+        }
+      }
+      .top-contact-info{
+        margin: 0;
+      }
+    }
+  }
+}
+
+.page-template-page-category {
+
+  #category_page-thumb {
+    position: relative;
+    * {
+      position: relative;
+      z-index: 2;
+    }
+    &:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: $black;
+      opacity: 0.6;
+    }
+    @media screen and (max-width: $screen-xs) {
+      height: auto;
+    }
+  }
+  .emphasis {
+    background: $black;
+    top: 580px;
+    box-sizing: border-box;
+    @media screen and (max-width: $screen-xl) {
+      top: -200px;
+    }
+    @media screen and (max-width: $screen-xs) {
+      top: 0;
+      margin-bottom: 0;
+      margin: 0;
+      width: 100%;
+    }
+    h2, a {
+      color: $white;
+    }
+    h2 {
+      min-height: auto;
+      margin: 16px 0 24px 0;
+      font-size: 2rem;
+    }
+    a.button {
+      text-underline-offset: 6px;
+      text-decoration-color: $gold;
+      position: relative;
+      display: inline-block;
+      padding-right: 30px;
+      margin: 0;
+      &:hover {
+        &:after {
+          opacity: 1;
+          right: 0;
+        }
+      }
+      &:after {
+        content: "\e903";
+        font-family: $icomoon;
+        position: absolute;
+        right: 10px;
+        font-size: 16px;
+        opacity: 0;
+        transition: $trans;
+      }
+    }
+  }
+  .awards-wrapper {
+    background: $ltgray;
+    #awards-repeater {
+      .slick-track {
+        .slick-slide {
+          margin-right: 32px;
+        }
+      }
+    }
+  }
+  .awards-wrapper + .blog-holder .content {
+    grid-template-columns: 1fr;
+    max-width: 80%;
+    margin: 0 auto;
+    @media screen and (max-width: $screen-md) {
+      max-width: 100%;
     }
   }
 }

@@ -30,7 +30,7 @@ $white: #FFFFFF;
 $gold: #FBCB35;
 $black: #0A090C;
 $ltgray: #F7F7F7;
-$gray: #A2A7A5;
+$gray: #6e7270;
 
 // Link Attributes
 $link-transition-speed: .15s;
@@ -39,8 +39,8 @@ $trans: 0.3s linear;
 // Typography
 @import url('https://use.typekit.net/kfa6idv.css');
 $icomoon: 'Icomoon';
-$poynter: 'poynter-oldstyle-display', serif;
-$forma: 'forma-djr-deck', sans-serif;
+$noto-serif: "Noto Serif", serif;
+$inter: "Inter", sans-serif;
 
 $body-line-height: 130%;
 

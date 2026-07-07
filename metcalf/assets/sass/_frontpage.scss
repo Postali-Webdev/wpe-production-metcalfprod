@@ -6,7 +6,7 @@
 **/
 
 %fp_interactive-titles {
-	font-family: $forma;
+	font-family: $inter;
 	font-weight: $light;
 	font-size: 1.2em;
 }
@@ -47,7 +47,8 @@
 }
 
 .home-sm {
-	font-size: 1.1em;
+	font-size: 24px !important;
+	font-family: $noto-serif !important;
 	color: #fff;
 }
 
@@ -62,22 +63,20 @@
 	padding: 0;
 
 	#fp_page-thumb {
-		min-height: 900px;
+		min-height: 700px;
 		background-size: cover;
 		position: relative;
 		background-color: #000;
 		background-repeat: no-repeat;
-		background-position: center 55%;
+		background-position: 0 top;
 		display: flex;
 		flex-direction: row;
 		justify-content: center;
 		align-items: flex-end;
 		padding-bottom: 60px;
-
-		@media screen and (max-width: $screen-xxl) {
-			background-position: center 80%;
+		@media screen and (min-width: 2560px) {
+			background-position: 0 -100px;
 		}
-
 		@media screen and (max-width: $screen-xl) {
 			min-height: -webkit-fit-content;
 			min-height: -moz-fit-content;
@@ -85,45 +84,29 @@
 		}
 
 		@media screen and (max-width: $screen-lg) {
-			//height: 700px;
 			padding-bottom: 30px;
 			background-position: center -80px;
 		}
 
 		@media screen and (max-width: $screen-md) {
-			height: 900px;
 			background-size: 155%;
 		}
 
 		@media screen and (max-width: $screen-sm) {
-			//background-size: cover;
+			height: 500px;
 			overflow: hidden;
 			background-position: center -50px;
-			height: 1000px;
 			padding-bottom: 0;
 		}
 
 		@media screen and (max-width: $screen-xs) {
 			background-size: 200%;
 			background-position: center -80px;
-			height: 1000px;
 		}
 
 		@media screen and (max-width: $screen-xxs) {
-			background-size: 240%;
-			background-position: center -80px;
-			height: 870px;
-		}
-
-		@media screen and (max-width: $screen-xxxs) {
-			background-size: 260%;
-			background-position: center -70px;
-			height: 800px;
-		}
-
-		@media screen and (max-width: $screen-4xs) {
-			height: 730px;
-			min-height: 730px;
+			background-size: 350%;
+			background-position: -350px -100px;
 		}
 
 		.inside-xl {
@@ -138,50 +121,35 @@
 	}
 
 	&_container {
-		width: 90%;
-		padding-top: 32vh;
-		max-width: $screen-xl;
+		width: 100%;
+		padding-top: 0;
+		max-width: 100%;
 		margin: 0 auto;
 		display: flex;
 		flex-direction: row;
 		justify-content: space-between;
 		align-items: center;
-
+		padding: 0 120px;
+		@media screen and (max-width: $screen-xl) {
+			padding: 0 60px;
+		}
 		@media screen and (max-width: $screen-md) {
 			box-sizing: border-box;
 			flex-direction: column;
-			justify-content: center;
+			justify-content: flex-end;
 			align-items: center;
 			background-color: rgba($black, .3);
 			background-size: cover;
-			height: 900px;
+			height: 700px;
 			width: 100%;
-			padding-top: 26vh;
-			padding-left: 40px;
+			padding: 0 30px;
 		}
-
-		@media screen and (max-width: $screen-sm) {
-			height: 1000px;
-			padding-top: 10vh;
-		}
-
 		@media screen and (max-width: $screen-xxs) {
-			padding: 10vh 10px 0 10px;
-			height: 870px;
-		}
-
-		@media screen and (max-width: $screen-xxxs) {
-			padding: 10vh 10px 0 10px;
 			height: 800px;
 		}
 
-		@media screen and (max-width: $screen-4xs) {
-			height: 730px;
-			padding-top: 20vh;
-		}
-
 		#fp-banner_left {
-			margin-left: 40px;
+			margin-left: 0;
 
 			.banner-cta {
 				width: 60%;
@@ -189,53 +157,61 @@
 
 			@media screen and (max-width: $screen-md) {
 				padding: 0;
-				width: 90%;
+				width: 100%;
 				margin: 0;
 
 				.banner-cta {
-					width: 90%;
+					width: 100%;
 				}
 			}
 
 			@media screen and (max-width: $screen-sm) {
 				padding: 0;
 			}
-
-			@media screen and (max-width: $screen-xxs) {
-				.banner-cta {
-					font-size: 2.6em;
-				}
-
-				.home-sm {
-					font-size: .9em;
-				}
-
-				.banner-tel {
-					font-size: 2.3em;
-				}
-			}
 		}
 
 		#fp-banner_right {
-			align-self: center;
-			margin-top: -20px;
+			align-self: flex-end;
+			margin-top: 0px;
+			margin-bottom: 24px;
 			max-width: 450px;
+			.global-award.always-flex {
+				@media screen and (max-width: $screen-xxs) {
+					flex-direction: row !important;
+					flex-wrap: nowrap !important;
+					.global-award_left {
+						margin-right: 12px;
+					}
+					.global-award_right {
+						border-top: 0;
+						border-left: 6px solid $gold;
+						padding-left: 12px;
 
+					}
+				}
+			}
 			.global-award_right p {
-				font-weight: $normal;
+				font-weight: $bold;
+				font-size: 20px;
+				line-height: 130%;
+				@media screen and (max-width: $screen-sm) {
+					font-size: 16px;
+					text-align: center;
+					margin: 15px 0;
+				}
 			}
 
 			@media screen and (max-width: $screen-md) {
-				width: 90%;
+				width: 100%;
 				max-width: none;
 				padding: 0;
-				margin: 0;
+				
 				align-self: center;
 
 				p {
 					display: block;
 					width: 80%;
-					margin: 10px 0;
+					margin: 0 0 30px 0;
 				}
 			}
 
@@ -246,7 +222,7 @@
 				.banner-right p {
 					display: block;
 					width: 85%;
-					margin-top: -10px;
+					margin-top: 0;
 					padding-bottom: 10px;
 
 				}
@@ -286,6 +262,8 @@
 
 				.banner-right p {
 					font-size: 1.2em;
+					margin-bottom: 16px;
+					padding-bottom: 0;
 				}
 
 				.global-award_right.forty-five {
@@ -321,11 +299,14 @@
 		margin: 20px 0;
 		color: $gold;
 		font-weight: $normal;
+		@media screen and (max-width: $screen-lg) {
+			max-width: 300px;
+		}
 	}
 
 	p {
 		margin: 10px 0;
-		font-family: $forma;
+		font-family: $inter;
 		font-weight: $bold;
 
 		&.home-sm {
@@ -334,36 +315,56 @@
 	}
 
 	a {
-		font-family: $forma;
+		font-family: $inter;
 		color: $gold;
 		font-weight: bold;
 
 		&.banner-tel {
-			font-size: 3em;
+			font-size: 42px;
 			line-height: 120%;
 			text-decoration: underline;
 			margin-bottom: 30px;
 			display: block;
+			text-underline-offset: 12px;
+			@media screen and (max-width: $screen-xl) {
+				margin-bottom: 0;
+			}
+			@media screen and (max-width: $screen-md) {
+				font-size: 32px;
+				margin-bottom: 30px;
+			}
+			@media screen and (max-width: $screen-xs) {
+				font-size: 28px;
+			}
 		}
 	}
 
 	.banner-cta {
 		margin: 20px 0;
 		color: $white;
-		font-family: $forma;
-		font-size: 3.5em;
-		line-height: 1.2em;
+		font-family: $inter;
+		font-size: 56px;
+		line-height: 120%;
 		font-weight: 700;
+		@media screen and (max-width: $screen-sm) {
+			font-size: 42px;
+		}
+		@media screen and (max-width: $screen-xxs) {
+			margin: 16px 0;
+		}
 	}
 
 	.banner-right {
 		p {
 			color: #fff;
 			margin: 30px 0;
-			font-size: 1.5em;
-
+			font-size: 24px;
+			font-family: $noto-serif !important;
 			@media screen and (min-width: $screen-xl) {
 				margin: 70px 0 30px;
+			}
+			@media screen and (max-width: $screen-sm) {
+				font-size: 16px !important;
 			}
 		}
 	}
@@ -374,6 +375,7 @@
 		a {
 			color: #fff;
 			text-decoration: underline;
+			font-size: 16px;
 		}
 
 		@media screen and (max-width: $screen-xl) {
@@ -416,7 +418,7 @@
 		article.main-article {
 			display: block;
 			margin-left: 60px;
-
+			
 			@media screen and (max-width: $screen-md) {
 				margin-left: 0;
 
@@ -459,7 +461,8 @@
 						line-height: 1.2em;
 						color: $black;
 						transition: $trans;
-
+						font-family: $noto-serif;
+						font-size: 20px;
 						span {
 							position: absolute;
 							right: 10px;
@@ -500,13 +503,14 @@
 
 		p {
 			color: #fff;
-			font-family: $forma;
-			font-weight: 500;
-			font-size: 1.3em;
+			font-family: $noto-serif;
+			font-weight: 400;
+			font-size: 22px;
+			line-height: 36px;
 		}
 
 		a {
-			font-family: $forma;
+			font-family: $inter;
 			color: $gold;
 			text-decoration: underline;
 			padding: 3px 6px;
@@ -523,7 +527,7 @@
 a.btn {
 	background: $gold;
 	color: $black;
-	font-family: $forma;
+	font-family: $inter;
 
 }
 
@@ -586,7 +590,7 @@ a.btn {
 
 	p {
 		font-weight: $bold;
-		letter-spacing: 1px;
+		letter-spacing: normal;
 	}
 
 	#fp-slick {
@@ -631,7 +635,7 @@ a.btn {
 					width: 100% !important;
 					font-size: 1.1em;
 					text-align: left;
-					font-family: $forma;
+					font-family: $inter;
 					padding: 5px 8px 2px;
 					cursor: pointer;
 					position: relative;
@@ -676,7 +680,7 @@ a.btn {
 			margin: 0;
 
 			.block-desc {
-				font-family: $forma;
+				font-family: $inter;
 				font-size: 1.4em;
 				line-height: 1.2em;
 				font-weight: $bold;
@@ -690,7 +694,7 @@ a.btn {
 				width: -webkit-fit-content;
 				width: -moz-fit-content;
 				width: fit-content;
-				font-family: $forma;
+				font-family: $inter;
 				padding: 2px 5px;
 				font-size: 1em;
 				font-weight: $bold;
@@ -707,7 +711,7 @@ a.btn {
 			display: block;
 			margin-top: 32px;
 			margin-bottom: 50px;
-			font-family: $forma;
+			font-family: $inter;
 			font-weight: $bold;
 			font-size: 1.1em;
 			letter-spacing: .45px;
@@ -776,22 +780,7 @@ a.btn {
 		position: relative;
 
 		#fp-practice-header {
-			box-sizing: border-box;
-			background: #fff;
-			z-index: 10;
-
-			h2 {
-				margin-top: 0;
-			}
-
-			p {
-				margin-bottom: 0;
-			}
-
-			@media screen and (min-width: $screen-md) {
-				position: absolute;
-				width: 40%;
-			}
+	
 		}
 	}
 }
@@ -994,12 +983,12 @@ a.btn {
 			h3 {
 				display: block;
 				margin: 40px 0;
-				font-family: $forma;
+				font-family: $inter;
 				font-weight: 700;
 				color: $black;
 				position: relative;
 				padding: 0 60px;
-
+				
 				span {
 					transition: transform .3s ease;
 					display: inline-block;
@@ -1122,7 +1111,7 @@ a.btn {
 			}
 
 			.headline {
-				font-family: $forma;
+				font-family: $inter;
 				font-size: 22px;
 				font-weight: bold;
 				margin-bottom: 10px;
@@ -1170,7 +1159,7 @@ a.btn {
 					align-items: flex-start;
 
 					p.heading {
-						font-family: $forma;
+						font-family: $inter;
 						font-weight: 600;
 						font-size: 22px;
 					}
@@ -1260,7 +1249,7 @@ a.btn {
                                 line-height: 1.9em;
                                 font-style: normal;
                                 font-weight: normal;
-                                font-family: $forma;
+                                font-family: $inter;
                                 display: flex;
                                 line-height: 150%;
     
@@ -1282,7 +1271,7 @@ a.btn {
                             .courts-cta {
         
                                 p {
-                                    font-family: $forma;
+                                    font-family: $inter;
                                     font-weight: 600;
                                 }
                             }

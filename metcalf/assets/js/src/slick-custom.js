@@ -28,15 +28,30 @@ jQuery( function ( $ ) {
 
 	$('#awards-repeater').slick({
 	  infinite: true,
+	  autoplay: true,
 	  prevArrow:"<button type='button' class='slick-prev slick-buttons icon icon-arrow-icon'>Previous</button>",
 	  nextArrow:"<button type='button' class='slick-next slick-buttons icon icon-arrow-icon'>Next</button>",
 	  slidesToShow: 5,
 	  slidesToScroll: 1,
 	  responsive: [
+		{
+	      breakpoint: 992,
+	      settings: {
+	        slidesToShow: 4,
+	        slidesToScroll: 1
+	      }
+	    },
 	    {
 	      breakpoint: 768,
 	      settings: {
 	        slidesToShow: 3,
+	        slidesToScroll: 1
+	      }
+	    },
+		{
+	      breakpoint: 667,
+	      settings: {
+	        slidesToShow: 2,
 	        slidesToScroll: 1
 	      }
 	    },
@@ -74,40 +89,5 @@ jQuery( function ( $ ) {
     	swipeToSlide: true,
 		cssEase: 'ease-in-out'
 	});
-
-
-	$('#fp-slick').slick({
-		dots: true,
-		infinite: true,
-		autoplay: false,
-		fade: true,
-		autoplaySpeed: 9000,
-		pauseOnHover: true,
-		pauseOnFocus: true,
-  		speed: 600,
-		slidesToShow: 1,
-		slidesToScroll: 1,
-		prevArrow:"<button type='button' class='slick-prev slick-buttons icon icon-arrow-icon'>Previous</button>",
-	    nextArrow:"<button type='button' class='slick-next slick-buttons icon icon-arrow-icon'>Next</button>",
-    	swipeToSlide: true,
-		cssEase: 'ease-in-out',
-		responsive: [
-			{
-				breakpoint: 992,
-				settings: {
-					dots: false,
-					autoplay: true
-				}
-			}
-		]
-	});
-
-
-	$('#slick-slide-control30').html('DUI <span class="icon-arrow-icon"></span>');
-	$('#slick-slide-control31').html('Domestic Violence <span class="icon-arrow-icon"></span>');
-	$('#slick-slide-control32').html('Violent Crimes <span class="icon-arrow-icon"></span>');
-	$('#slick-slide-control33').html('Sex Crimes <span class="icon-arrow-icon"></span>');
-	$('#slick-slide-control34').html('Drug Crimes <span class="icon-arrow-icon"></span>');
-	$('#slick-slide-control35').html('Personal Injury <span class="icon-arrow-icon"></span>');
 	
 });

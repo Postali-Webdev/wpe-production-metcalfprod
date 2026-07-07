@@ -13,17 +13,6 @@ $aboveLeft = get_field('main_left', 'options');
 $aboveRight = get_field('main_right', 'options');
 $image = get_field('main_image', 'options');
 
-//Protect against arbitrary paged values
-$paged = ( get_query_var( 'paged' ) ) ? absint( get_query_var( 'paged' ) ) : 1;
-
-$args = array (
-	'post_type' => 'post',
-	'post_per_page' => '6',
-	'post_status' => 'publish',
-	'order' => 'DESC',
-	'paged' => $paged
-);
-$the_query = new WP_Query($args);
 get_header(); ?>
 
 <div id="blog-holder">
@@ -54,14 +43,7 @@ get_header(); ?>
 
         		<?php if ( function_exists('yoast_breadcrumb') ) {yoast_breadcrumb('<p id="breadcrumbs">','</p>');} ?> 
         	
-	        	<?php 
-			    // Display the page title if set; else use 'News'              
-			    if ($page_for_posts) {
-			      echo '<h1 class="archive-h1">' . get_the_title($page_for_posts) . '</h1>';
-			    } else {
-			      echo '<h1 class="archive-h1">Blog</h1>';
-			    }
-			    ?>
+	        	<h1>Legal Blog | <?php $categories = get_the_category(); echo $categories[0]->name; ?></h1>
 			    <div class="top-contact-info">
 					<span class='contact-phone-email version2 ondark'>
 						<a class='btn' id='header-phone' href="tel:<?php echo $footerPhone; ?>">
@@ -91,33 +73,24 @@ get_header(); ?>
 
 
 	<section class="inside-xl blog-posts">
-	
-
 		<div class="blog-2020">
-
-
-
-				<?php while( $the_query->have_posts() ) : $the_query->the_post(); ?>
-					<article class='index_blog-posts'>
-						<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>">
-							
-							<?php $background_img = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'full' ); ?>
-							<div class="featured-wrap" style="background-image: url('<?php echo esc_attr( $background_img[0] ); ?>' ); background-size: cover; background-repeat: no-repeat; background-position: center top;"></div>
-							<div class="article-content">
-								<div class="gold-block blog-date-author-container"><time datetime="<?php the_time('Y-m-d'); ?>" pubdate="pubdate"><?php the_time('n.j.Y'); ?></time><p class="blog-author-title">By: Brett Metcalf</p></div>
-								<span class='blog-title'><?php the_title(); ?></span>
-								<span class="read-post button">Read Blog</span>
-							</div>
-						</a>	
-					</article>
-				<?php endwhile; wp_reset_postdata(); ?>
-			
+            <?php while( have_posts() ) : the_post(); ?>
+                <article class='index_blog-posts'>
+                    <a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>">
+                        
+                        <?php $background_img = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'full' ); ?>
+                        <div class="featured-wrap" style="background-image: url('<?php echo esc_attr( $background_img[0] ); ?>' ); background-size: cover; background-repeat: no-repeat; background-position: center top;"></div>
+                        <div class="article-content">
+                            <div class="gold-block blog-date-author-container"><time datetime="<?php the_time('Y-m-d'); ?>" pubdate="pubdate"><?php the_time('n.j.Y'); ?></time><p class="blog-author-title">By: Brett Metcalf</p></div>
+                            <span class='blog-title'><?php the_title(); ?></span>
+                            <span class="read-post button">Read Blog</span>
+                        </div>
+                    </a>	
+                </article>
+            <?php endwhile; wp_reset_postdata(); ?>
 		</div>
 		
 		<?php the_posts_pagination(); ?>
-
-
-
 	</section>
 
     <?php get_template_part('block', 'contact');?>

@@ -214,7 +214,7 @@ body {
   background: $gold;
   display: inline-block;
   padding: 5px 10px 3px;
-  font-family: $forma;
+  font-family: $inter;
   font-weight: bold;
   a {
     text-decoration: underline !important;
@@ -227,7 +227,7 @@ body {
 }
 
 .link_underline {
-  font-family: $forma;
+  font-family: $inter;
   font-size: 0.8em;
   text-decoration: underline;
   font-weight: 700;
@@ -305,14 +305,14 @@ img {
   h3 {
     a {
       color: #000;
-      font-family: $forma;
+      font-family: $inter;
     }
   }
   section.page-thumb {
     h3 {
       a {
         color: #fff;
-        font-family: $forma;
+        font-family: $inter;
       }
     }
   }
@@ -367,11 +367,11 @@ img {
   box-sizing: border-box;
   #breadcrumbs {
     color: #fff;
-    font-family: $forma;
+    font-family: $inter;
     a:link,
     a:visited,
     a:active {
-      font-family: $forma;
+      font-family: $inter;
       font-weight: $bold;
       color: #fff;
       text-decoration: underline;
@@ -427,7 +427,7 @@ img {
         display: block;
         padding: 20px 0 10px 0;
         margin: 20px 0 0 5px;
-        font-family: $forma;
+        font-family: $inter;
         font-size: 1em;
         font-weight: $bold;
         text-decoration: underline;
@@ -442,7 +442,7 @@ article {
   blockquote {
     font-size: 1.2em;
     h4 {
-      font-family: $forma;
+      font-family: $inter;
       text-transform: uppercase;
       font-weight: 400;
       font-size: 1.2em;
@@ -458,7 +458,7 @@ article {
       position: absolute;
       font-size: 4em;
       color: $gold;
-      font-family: $forma;
+      font-family: $inter;
       margin-left: -50px;
       margin-top: 25px;
     }
@@ -526,7 +526,7 @@ ul.gold-li {
   li {
     display: block;
     margin: 0 10px 0 0;
-    line-height: 1.9em;
+    line-height: 1.5;
     padding-left: 20px;
   }
   li::before {
@@ -574,13 +574,13 @@ blockquote {
 
 .feat_quote {
   font-size: 2em;
-  font-family: $forma;
+  font-family: $inter;
   color: $black;
   font-weight: $bold;
   &_author {
     display: block;
     margin-top: 32px;
-    font-family: $forma;
+    font-family: $inter;
     font-size: 0.9em;
     font-weight: $normal;
     text-transform: uppercase;
@@ -601,24 +601,27 @@ blockquote {
 /* BLOCK LEVEL ELEMENTS */
 #breadcrumbs {
   color: #000;
-  font-family: $forma;
+  font-family: $inter;
   margin-top: 0;
-  font-weight: $bold;
+  margin-bottom: 0;
+  font-weight: 500;
   a:link,
   a:active,
   a:visited {
     color: #000;
-    font-family: $forma;
+    font-family: $inter;
   }
   a {
     text-decoration: underline;
-    font-family: $forma;
+    font-family: $inter;
+    font-weight: 500 !important;
   }
   &.black {
     color: $black;
   }
   @media screen and (max-width: $screen-lg) {
     margin-top: 20px;
+    margin-bottom: 20px;
   }
   @media screen and (max-width: $screen-xs) {
     padding: 0;
@@ -632,7 +635,7 @@ blockquote {
 
 .pagination .nav-links {
   font-size: 1.2em;
-  font-family: $forma;
+  font-family: $inter;
   margin-top: 100px;
   text-align: center;
   a,
@@ -707,14 +710,14 @@ blockquote {
     border-bottom: 1px solid $black;
     margin-bottom: 50px;
     .button {
-      font-family: $forma;
+      font-family: $inter;
     }
   }
   .padd {
     background: $ltgray;
   }
   .archive_sidebar-menu {
-    font-family: $forma;
+    font-family: $inter;
   }
 }
 
@@ -730,7 +733,7 @@ blockquote {
           padding: 13px 10px 8px;
           color: #000;
           border-bottom: 1px solid #000;
-          font-family: $forma;
+          font-family: $inter;
           position: relative;
         }
         a:after {
@@ -765,7 +768,7 @@ blockquote {
       span.blog-title {
         display: block;
         margin: 10px 0 25px 0;
-        font-family: $forma;
+        font-family: $inter;
         font-size: 1.3em;
         font-weight: $bold;
         line-height: 1.2em;
@@ -774,7 +777,7 @@ blockquote {
         display: block;
         padding-bottom: 20px;
         margin: 10px 0 0 5px;
-        font-family: $forma;
+        font-family: $inter;
         font-size: 0.7em;
         font-weight: $bold;
         text-decoration: underline;
@@ -804,7 +807,7 @@ blockquote {
     padding-left: 30px;
     font-size: 1.2em;
     box-sizing: border-box;
-    border-left: 4px solid $gold;
+    border-left: 6px solid $gold;
     p {
       color: $gold;
     }
@@ -845,12 +848,16 @@ blockquote {
       width: 300px;
     }
 
-    img.slick-slide {
-      padding: 10px;
+    .slick-slide {
+      margin-right: 16px;
+      @media screen and (max-width: $screen-xxs) {
+        margin: 0 auto;
+      }
     }
   }
 
   .slick-arrow::before {
+    font-family: $icomoon;
     color: #000;
     font-size: 20px;
   }
@@ -916,7 +923,7 @@ blockquote {
 
 %contact-info-style {
   display: block;
-  font-family: $forma;
+  font-family: $inter;
   font-weight: $bold;
   font-size: 1.25em;
   line-height: 1.5em;
@@ -1311,4 +1318,205 @@ footer {
 
 .spacer-90 {
   height: 90px;
+}
+
+.contact-phone-email.version2 {
+  display: flex !important;
+  flex-wrap: wrap;
+  column-gap: 28px;
+  row-gap: 18px;
+  margin: 0 !important;
+  padding: 0 !important;
+  &.ondark {
+    #header-phone {
+      color: $black !important;
+      &:hover {
+        color: $black !important;
+        background: $white;
+        &:before {
+          filter: unset !important;
+        }
+      }
+    }
+    #contact-link {
+      color: $white;
+      border-color: $white;
+      &:before {
+        filter: invert(1);
+      }
+      &:hover {
+        color: $black;
+        border-color: $gold;
+        &:before {
+          filter: invert(0)
+        }
+      }
+    }
+  }
+  a {
+    margin: 0;
+    @media screen and (max-width: $screen-xs) {
+      width: 100%;
+      box-sizing: border-box;
+      text-align: center;
+      justify-content: center;
+      &:before {
+        left: 50px !important; 
+      }
+    }
+  }
+  #header-phone {
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 15px 40px 15px 50px;
+    &:hover {
+      &:before {
+        filter: brightness(0) saturate(100%) invert(89%) sepia(70%) saturate(1370%) hue-rotate(325deg) brightness(99%) contrast(99%);
+      }
+    }
+    &:before {
+        content: "";
+        display: block;
+        height: 24px;
+        width: 24px;
+        background: url('/wp-content/themes/metcalf/assets/img/phone-icon.svg') no-repeat;
+        background-size: contain;
+        position: absolute;
+        left: 12px;
+    }
+  }
+  #contact-link {
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 14px 39px 14px 49px;
+    &:before {
+        content: "";
+        display: block;
+        height: 24px;
+        width: 24px;
+        background: url('/wp-content/themes/metcalf/assets/img/email-icon.svg') no-repeat;
+        background-size: contain;
+        position: absolute;
+        left: 12px;
+    }
+  }
+}
+
+#testi-block {
+  padding-top: 50px;
+  padding-bottom: 0;
+  &.sidebar-quote {
+    .flex {
+      #testi-block_left {
+        max-width: 100%;
+        min-width: 100%;
+        background: none;
+        #testi_blockquote {
+          background: none;
+          border: 0;
+          p, span {
+            color: $black;
+            font-size: 24px;
+          }
+          .testimonial-block {
+            &:before {
+              font-size: 2em;
+              margin-top: 0;
+              margin-left: 0;
+            }
+            .feat_quote {
+              display: block;
+              margin-left: 40px;
+              & + br {
+                display: none !important;
+              }
+            }
+          }
+        }
+      }
+    }
+    .feat_quote_author {
+      color: $gray !important;
+      font-size: 14px !important;
+      margin: 10px 0 0 40px !important;
+      display: block;
+    }
+  }
+}
+
+#sidebar-contact {
+  background: $gold;
+  margin-top: 21px;
+  padding: 30px;
+  .above-footer_contact, .above-footer_contact span {
+    font-size: 28px;
+    font-weight: $bold;
+    line-height: 36px;
+    font-family: $inter;
+    color: $black;
+  }
+  #header-phone {
+    background: $white;
+    border: solid 1px $white;
+    &:hover {
+      border: solid 1px $black;
+      background: None;
+      color: $black;
+      &:before {
+        filter: unset;
+      }
+    }
+  }
+  .btn-secondary {
+    &:hover {
+      background: $white !important;
+    }
+  }
+}
+
+.sidebar-results {
+  padding: 0;
+  margin: 21px 0 0 0;
+  #results-block_left {
+      article {
+        padding: 40px;
+        margin: 0;
+        .results-number.gold {
+          color: $white;
+          font-size: 24px !important;
+        }
+        .results-desc {
+          font-size: 18px !important;
+          line-height: 27px !important;
+        }
+        a.button {
+          text-underline-offset: 6px;
+          text-decoration-color: $gold;
+          position: relative;
+          display: inline-block;
+          padding-right: 30px;
+          margin: 24px 0 0 0;
+          color: $white;
+          &:hover {
+            &:after {
+              opacity: 1;
+              right: 0;
+            }
+          }
+          &:after {
+            content: "\e903";
+            font-family: $icomoon;
+            position: absolute;
+            top: 5px;
+            right: 10px;
+            font-size: 16px;
+            opacity: 0;
+            transition: $trans;
+          }
+        }
+      }
+  }
+
 }

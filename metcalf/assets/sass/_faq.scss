@@ -39,14 +39,14 @@
       }
       &.gold-li {
         font-size: 18px;
-        font-family: $poynter;
+        font-family: $noto-serif;
         @media screen and (max-width: $screen-xxs) {
           font-size: 16px;
         }
       }
     }
     a.accordion-toggle {
-      font-family: $forma;
+      font-family: $inter;
       color: $black;
       display: flex;
       flex-direction: row;

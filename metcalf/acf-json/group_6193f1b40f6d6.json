@@ -3,10 +3,11 @@
     "title": "About Attorney- Page Template",
     "fields": [
         {
-            "key": "field_6193f1b417139",
-            "label": "Description",
-            "name": "description",
-            "type": "text",
+            "key": "field_6a3030b783aad",
+            "label": "Banner",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -15,16 +16,15 @@
                 "class": "",
                 "id": ""
             },
-            "default_value": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "maxlength": ""
+            "placement": "left",
+            "endpoint": 0,
+            "selected": 0
         },
         {
             "key": "field_6193fa0fe1b1c",
             "label": "Attorney Headshot",
             "name": "attorney_headshot",
+            "aria-label": "",
             "type": "image",
             "instructions": "",
             "required": 0,
@@ -46,9 +46,31 @@
             "mime_types": ""
         },
         {
-            "key": "field_6193f1b417175",
-            "label": "Top Section",
-            "name": "top_section",
+            "key": "field_6a3030eb83aae",
+            "label": "Position",
+            "name": "position",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "allow_in_bindings": 0,
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_6193f1b4171ae",
+            "label": "Quote",
+            "name": "quote",
+            "aria-label": "",
             "type": "wysiwyg",
             "instructions": "",
             "required": 0,
@@ -65,9 +87,48 @@
             "delay": 0
         },
         {
-            "key": "field_6193f1b4171ae",
-            "label": "Quote",
-            "name": "quote",
+            "key": "field_6a30311083aaf",
+            "label": "Body",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "left",
+            "endpoint": 0,
+            "selected": 0
+        },
+        {
+            "key": "field_6193f1b417139",
+            "label": "Description",
+            "name": "description",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_6193f1b417175",
+            "label": "Top Section",
+            "name": "top_section",
+            "aria-label": "",
             "type": "wysiwyg",
             "instructions": "",
             "required": 0,
@@ -87,6 +148,7 @@
             "key": "field_6193f1b4171e8",
             "label": "Accordions",
             "name": "accordions",
+            "aria-label": "",
             "type": "repeater",
             "instructions": "",
             "required": 0,
@@ -106,6 +168,7 @@
                     "key": "field_6193f1b422b30",
                     "label": "Title",
                     "name": "title",
+                    "aria-label": "",
                     "type": "text",
                     "instructions": "",
                     "required": 0,
@@ -119,12 +182,14 @@
                     "placeholder": "",
                     "prepend": "",
                     "append": "",
-                    "maxlength": ""
+                    "maxlength": "",
+                    "parent_repeater": "field_6193f1b4171e8"
                 },
                 {
                     "key": "field_6193f1b422b6c",
                     "label": "Content",
                     "name": "content",
+                    "aria-label": "",
                     "type": "wysiwyg",
                     "instructions": "",
                     "required": 0,
@@ -138,14 +203,17 @@
                     "tabs": "all",
                     "toolbar": "full",
                     "media_upload": 0,
-                    "delay": 0
+                    "delay": 0,
+                    "parent_repeater": "field_6193f1b4171e8"
                 }
-            ]
+            ],
+            "rows_per_page": 20
         },
         {
             "key": "field_6193f1b417223",
             "label": "Our Approach",
             "name": "our_approach",
+            "aria-label": "",
             "type": "repeater",
             "instructions": "",
             "required": 0,
@@ -165,6 +233,7 @@
                     "key": "field_6193f1b42be67",
                     "label": "Title",
                     "name": "title",
+                    "aria-label": "",
                     "type": "text",
                     "instructions": "",
                     "required": 0,
@@ -178,12 +247,14 @@
                     "placeholder": "",
                     "prepend": "",
                     "append": "",
-                    "maxlength": ""
+                    "maxlength": "",
+                    "parent_repeater": "field_6193f1b417223"
                 },
                 {
                     "key": "field_6193f1b42bea5",
                     "label": "Content",
                     "name": "content",
+                    "aria-label": "",
                     "type": "textarea",
                     "instructions": "",
                     "required": 0,
@@ -197,14 +268,17 @@
                     "placeholder": "",
                     "maxlength": "",
                     "rows": "",
-                    "new_lines": ""
+                    "new_lines": "",
+                    "parent_repeater": "field_6193f1b417223"
                 }
-            ]
+            ],
+            "rows_per_page": 20
         },
         {
             "key": "field_6193f1c833c88",
             "label": "Featured Review",
             "name": "featured_review",
+            "aria-label": "",
             "type": "wysiwyg",
             "instructions": "",
             "required": 0,
@@ -231,12 +305,16 @@
         ]
     ],
     "menu_order": 0,
-    "position": "normal",
-    "style": "seamless",
+    "position": "acf_after_title",
+    "style": "default",
     "label_placement": "top",
     "instruction_placement": "label",
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1637087862
+    "show_in_rest": 0,
+    "display_title": "",
+    "allow_ai_access": false,
+    "ai_description": "",
+    "modified": 1781543197
 }

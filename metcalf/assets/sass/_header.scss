@@ -221,7 +221,7 @@ $translateX: 0;
         padding: 24px 0;
         a {
             color: $white;
-            font-family: $forma;
+            font-family: $inter;
             font-weight: 700;
             padding: 18px 15px 16px;
             display: block;
@@ -258,7 +258,7 @@ $translateX: 0;
                 padding: 0;
                 text-align: center;
                 a {
-                    font-family: $poynter;
+                    font-family: $noto-serif;
                     font-weight: 400;
                     padding: 10px;
                     transition: background 0.4s ease;
@@ -360,7 +360,7 @@ $translateX: 0;
       text-align: center;
       margin-bottom: 10px;
       a {
-        font-family: $forma;
+        font-family: $inter;
         font-weight: 700;
         color: $black;
         display: inline-block;
@@ -374,7 +374,7 @@ $translateX: 0;
       > li {
         margin-bottom: 0;
         a {
-          font-family: $poynter;
+          font-family: $noto-serif;
           font-weight: 400;
           padding: 10px;
         }

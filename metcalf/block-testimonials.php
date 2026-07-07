@@ -63,8 +63,6 @@ $testi_topic = new WP_Query( $args );
                         ?>
                             <div class="google-schema_single">
                                 
-                                <p class="google-schema_date"><?php the_field('date_of_review'); ?></p>
-                                
                                 <div class="google-schema_excerpt"><?php the_excerpt(); ?></div>
                                 
                                 <div class="google-schema_meta always-flex">
@@ -103,7 +101,6 @@ $testi_topic = new WP_Query( $args );
                     </div>
 
                     <div class='schema-average'>
-                        <span class="google-schema_average">Average <span><?php echo $avg_rating / $testi_topic->found_posts; ?></span> out of <span>5</span> rating based on <span></span>44 Reviews</span>
                         <div>
                             <meta content="Hillsborough Defense, P.A.">
                         </div>

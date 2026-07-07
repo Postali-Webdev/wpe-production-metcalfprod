@@ -1,32 +1,30 @@
 <?php
 /**
- * Above Theme footer
- *
- * @package Postali Child
+ * Contact Block
+ * @package Postali Parent
  * @author Postali LLC
-**/
+ */
 
 $footerPhone = get_field('phone', 'options');
 $footerEmail = get_field('email', 'options');
 $footerContactLink = get_field('contact_page_link', 'options');
 $aboveLeft = get_field('main_left', 'options');
+$aboveLeftWesley = get_field('main_left_wesley', 'options');
 $aboveRight = get_field('main_right', 'options');
+$aboveRightWesley = get_field('main_right_wesley', 'options');
 $image = get_field('main_image', 'options');
 
 ?>
 
-<footer id="above-footer">
-	<div class="inside-xl flex">
-
-		<div class="sub-inside sixty">
-			<div><?php echo $aboveLeft; ?></div>
+<div id="sidebar-contact">
+	<div class="flex">
+		<div>
+            <?php if( !empty( $image ) ): ?>
+                <div class="round-small"><img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" /></div>
+            <?php endif; ?>	
+            <div><?php echo $aboveLeft; ?></div>
 			<div class="contact-info">
-				<div>
-					<?php if( !empty( $image ) ): ?>
-					<div class="round-small"><img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" /></div>
-					<?php endif; ?>
-				</div>
-				<span class='contact-phone-email version2 ondark'>
+				<span class='contact-phone-email version2'>
 					<a class='btn' id='header-phone' href="tel:<?php echo $footerPhone; ?>">
 						Call Us
 					</a>
@@ -36,10 +34,5 @@ $image = get_field('main_image', 'options');
 				</span>
 			</div>
 		</div>
-
-		<div class="sub-inside forty">
-			<p><?php echo $aboveRight; ?></p>
-		</div>
-
 	</div>
-</footer>
+</div>

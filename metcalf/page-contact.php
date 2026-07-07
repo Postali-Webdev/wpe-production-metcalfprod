@@ -9,6 +9,7 @@
 
 $footerPhone = get_field('phone', 'options');
 $footerEmail = get_field('email', 'options');
+$footerContactLink = get_field('contact_page_link', 'options');
 $aboveLeft = get_field('main_left', 'options');
 $aboveRight = get_field('main_right', 'options');
 
@@ -34,13 +35,19 @@ get_header(); ?>
 
 	                <h1 class="archive-h1"><?php the_title(); ?></h1>
 
+					<?php if( !empty( $image ) ): ?>
+						<div class="round-small"><img src="/wp-content/uploads/2020/01/interior-page-header-attorney-thumbnail.jpg" alt='Attorney Brett Metcalf head shot'/></div>
+					<?php endif; ?>
+
 					<div class="top-contact-info" id='contact_info-block'>
-	                    <div>
-	                        <?php if( !empty( $image ) ): ?>
-	                        <div class="round-small"><img src="/wp-content/uploads/2020/01/interior-page-header-attorney-thumbnail.jpg" alt='Attorney Brett Metcalf head shot'/></div>
-	                        <?php endif; ?>
-	                    </div>
-						<span class='contact-phone-email'><span class='gold'>P</span> <a class='black' id='header-phone' href="tel:<?php echo $footerPhone; ?>"><?php echo $footerPhone; ?></a><br><span class='gold'>E</span> <a class='black email-underline header-email' href="mailto:<?php echo $footerEmail; ?>"><?php echo $footerEmail; ?></a></span>
+						<span class='contact-phone-email version2'>
+							<a class='btn' id='header-phone' href="tel:<?php echo $footerPhone; ?>">
+								Call Us
+							</a>
+							<a class='btn btn-secondary' id='contact-link' href="<?php echo $footerContactLink['url']; ?>">
+								<?php echo $footerContactLink['title']; ?>
+							</a>
+						</span>
 	                </div>
 
 					<div class="address-container">
